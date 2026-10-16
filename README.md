@@ -1,4 +1,4 @@
-# Skyrim — The Fate Director v2.1.1
+# Skyrim — The Fate Director v2.1.2
 
 **The Arbiter of Fate** · A Survivor Incognito expedition companion.
 
