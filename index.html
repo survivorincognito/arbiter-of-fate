@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#151b22"><title>Skyrim — The Fate Director · The Arbiter of Fate · v2.0</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#151b22"><title>Skyrim — The Fate Director · The Arbiter of Fate · v2.1.1</title><style>
 :root{color-scheme:dark;--bg:#11171e;--panel:#1b2530;--panel2:#24313d;--line:#3a4b56;--text:#e8e5d9;--muted:#a8b2b8;--gold:#dfbb78;--good:#8bc8aa}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#26313a 0,#11171e 55%);font:15px/1.5 system-ui,Segoe UI,sans-serif;color:var(--text)}header,main,footer{max-width:1050px;margin:auto;padding:18px}header{padding-top:30px}h1{font-family:Georgia,serif;letter-spacing:.03em;margin:0;color:var(--gold);font-size:clamp(27px,5vw,40px)}h2{font-family:Georgia,serif;color:var(--gold);font-size:21px;margin:0 0 12px}h3{margin:0 0 8px;font-size:16px}p{margin:8px 0}small,.muted{color:var(--muted)}.eyebrow{font-size:11px;letter-spacing:.17em;color:var(--gold);text-transform:uppercase}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0;box-shadow:0 6px 18px #0002}.sub{background:var(--panel2);padding:13px;border-radius:10px;margin:10px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px}.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.between{justify-content:space-between}.tabs{display:flex;gap:6px;overflow-x:auto;padding:5px 0 10px}.tabs button{white-space:nowrap}.tabs button.active{background:var(--gold);color:#19212a}button,input,select,textarea{font:inherit;border-radius:8px}button{border:1px solid #63717b;background:#334351;color:#fff;padding:10px 13px;cursor:pointer}button:hover{filter:brightness(1.13)}button:disabled{opacity:.45;cursor:not-allowed}button.primary{background:var(--gold);border-color:var(--gold);color:#1a2026;font-weight:700}button.danger{border-color:#9d6969}input,select,textarea{background:#111b23;border:1px solid #65717a;color:#fff;padding:10px;width:100%;min-width:0}label{display:block;font-size:13px;color:var(--muted);margin:8px 0 4px}.check{display:flex;align-items:center;gap:9px;color:var(--text);margin:9px 0}.check input{width:auto}.pill{font-size:11px;border:1px solid #60707b;border-radius:99px;padding:2px 8px;color:var(--muted)}.stat{background:var(--panel2);border-radius:10px;text-align:center;padding:10px}.stat strong{display:block;color:var(--gold);font-size:23px}.quest{border-bottom:1px solid var(--line);padding:10px 0}.quest:last-child{border:0}.quest b{display:block}.quest small{display:block}.quest .row{margin-top:7px}.hide{display:none!important}.message{padding:10px 12px;border-left:3px solid var(--gold);background:#3a352c;margin:10px 0}.ok{border-color:var(--good)}.log{max-height:300px;overflow:auto}.log div{border-bottom:1px solid var(--line);padding:7px 0;font-size:13px}.badge{color:var(--gold)}footer{font-size:12px;color:var(--muted);padding-bottom:30px}.full{width:100%}button.small{font-size:12px;padding:5px 8px}code{color:var(--gold)}@media(max-width:520px){header,main,footer{padding:12px}.panel{padding:13px}.tabs button{padding:8px 10px}}
 .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px;margin:12px 0}.skill-grid label{font-size:13px;margin:0}.skill-grid input{width:100%;margin:4px 0 0}.perk-row{padding:9px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}.perk-row small{display:block;color:var(--muted);font-size:12px}.perk-row input{margin-top:4px}.perk-scroll{max-height:320px;overflow:auto;border:1px solid var(--line);border-radius:10px;padding:4px 12px}.perk-available{color:var(--good)}.perk-locked{opacity:.75}
 .pill.ready{color:#9de0b8;border-color:#54896d}.pill.pending{color:#e7c783;border-color:#9a7d48}.pill.locked{color:#e7a7a7;border-color:#986565}.quest-status{margin:5px 0;font-size:12px;color:var(--muted)}
@@ -51,7 +51,9 @@
 .journal-card-meta{font-size:12px;color:var(--muted);display:block;margin-top:3px;line-height:1.4}
 .journal-card-chevron{font-size:17px;color:var(--gold);flex-shrink:0}
 .journal-card-state{font-size:11px;border:1px solid #60707b;border-radius:99px;color:var(--muted);padding:3px 7px;white-space:nowrap}
-.journal-card-state.done{color:#9de0b8;border-color:#54896d}
+.journal-card-state.done{color:#9de0b8;border-color:#54896d}.journal-card-state.failed{color:#e7a7a7;border-color:#986565}
+/* v2.1.0: quest outcome decisions stay inside compact expanded quest cards */
+.cross-panel-v211{border:1px solid #777052;background:#252e37;border-radius:10px;padding:11px;margin:12px 0}.cross-panel-v211 h3{color:var(--gold)}.cross-panel-v211 p{margin:8px 0}.cross-panel-v211 .row button{white-space:normal} .branch-choice-v210{border:1px solid var(--line);border-radius:10px;background:#20303b;padding:12px;margin:12px 0}.branch-choice-v210 h3{color:var(--gold);font-size:14px;margin:0 0 5px}.branch-choice-v210 .row{align-items:stretch}.branch-choice-v210 button{font-size:12px;white-space:normal;text-align:left}.branch-choice-v210 .branch-accepted{color:var(--good);font-size:12px;margin-top:8px}.branch-outcome-v210{margin:8px 0;color:var(--muted);font-size:12px}
 .journal-card-state.assigned{color:var(--gold);border-color:#ae8d54}
 .journal-quick{font-size:12px;padding:7px 10px;flex:0 0 auto;white-space:nowrap}
 .journal-card-body{padding:3px 13px 13px;border-top:1px solid var(--line);font-size:13px}
@@ -164,7 +166,7 @@
 .guide-note-v2{background:rgba(223,187,120,.07);border-left:3px solid var(--gold);padding:9px 12px;border-radius:0 7px 7px 0}
 #howToUseV2{scroll-margin-top:12px}
 </style></head><body><header><div class="eyebrow">Survivor Incognito · Expedition Tools</div><h1>Skyrim — The Fate Director</h1>
-<div class="arbiter-identity-v2"><span class="arbiter-mark-v2" aria-hidden="true">✦</span><span>The Arbiter of Fate</span><span class="arbiter-version-v2">v2.0</span></div>
+<div class="arbiter-identity-v2"><span class="arbiter-mark-v2" aria-hidden="true">✦</span><span>The Arbiter of Fate</span></div>
 <p class="muted">You choose the journey. The Arbiter chooses the direction.</p></header><main><nav class="tabs" id="tabs" aria-label="Expedition sections"></nav><div id="notice" role="status" aria-live="polite"></div>
 <section id="dashboard" class="page">
 <details class="panel" id="gettingStarted1976"><summary><strong>Getting Started</strong> <span class="muted">· a quick guide to your first expedition</span></summary>
@@ -227,7 +229,7 @@
  <details class="sub" id="shoutCustomPanel1974"><summary><strong>Add a modded or custom shout</strong></summary><p class="muted">For content not included in the standard 27-shout catalogue.</p><label for="shoutCustomName1974">Shout name</label><input id="shoutCustomName1974" maxlength="100" placeholder="Name of shout"><label for="shoutCustomWords1974">Words of Power (separate with commas; up to three)</label><input id="shoutCustomWords1974" placeholder="Word one, word two, word three"><div class="row" style="margin-top:10px"><button class="primary" type="button" id="shoutCustomAdd1974">Add custom shout</button><button type="button" id="shoutExport1974">Export shout tracker (JSON)</button></div></details>
  </article>
 </section>
-<section id="journal" class="page hide"><article class="panel"><h2>Quest Journal</h2><p class="muted" id="catalogueStatus">Track what you encounter in Skyrim. Browse quests, mark them discovered, then complete them when finished.</p>
+<section id="journal" class="page hide"><article class="panel"><h2>Quest Journal</h2><p class="muted" id="catalogueStatus">Track Skyrim quests, branching choices and cross-quest consequences. Fate chooses assignments, not your decisions, and cannot read your Skyrim journal.</p>
 <div class="journal-view-tabs" role="tablist" aria-label="Quest status">
 <button type="button" data-journal-view="all" role="tab" aria-selected="true">All <span class="journal-num" id="journalAllCount1967"></span></button>
 <button type="button" data-journal-view="discovered" role="tab" aria-selected="false">Discovered <span class="journal-num" id="journalDiscoveredCount1967"></span></button>
@@ -279,9 +281,9 @@
 <div class="row"><button type="button" class="small" data-guide-tab-v2="director">Open Arbiter</button><button type="button" class="small" data-guide-tab-v2="character" data-guide-anchor-v2="characterProgress1973">Level-up controls</button></div>
 </details>
 <details class="sub release-doc1984" id="guideQuestsV2"><summary><strong>3. Use the Quest Journal</strong> · discover, draw, complete or block</summary>
-<p><b>All</b> contains undiscovered catalogue quests; <b>Discovered</b> holds accepted quests (including active assignments); <b>Completed</b> records finished quests. Manually suspended objectives are kept in the separate <b>Blocked</b> tab.</p>
-<ol class="release-steps1984"><li>When you encounter a quest in Skyrim, find it in <b>All</b> and choose <b>Discover</b>. Use search, category, faction and alphabetical filters to browse.</li><li>Choose <b>Draw Objective</b> on the Dashboard or under Arbiter when ready. Fate chooses from the quests currently eligible under your saved rules.</li><li>After completing the objective <b>in-game</b>, record <b>Complete</b>. If you cannot proceed, <b>Suspend / Block</b> it and give a reason; review it later under Blocked.</li></ol>
-<p class="guide-note-v2">The catalogue cannot guarantee a quest is currently startable. Prerequisites, story branches and mod changes sometimes need you to confirm things in Skyrim. Approval is your confirmation, not an automatic unlock.</p>
+<p><b>All</b> contains undiscovered catalogue quests; <b>Discovered</b> holds accepted quests (including active assignments); <b>Completed</b> includes finished and failed quests, including branching decisions and outcome notes. Manually suspended objectives are kept in the separate <b>Blocked</b> tab.</p>
+<ol class="release-steps1984"><li>When you encounter a quest in Skyrim, find it in <b>All</b> and choose <b>Discover</b>. Use search, category, faction and alphabetical filters to browse.</li><li>Choose <b>Draw Objective</b> on the Dashboard or under Arbiter when ready. Fate chooses from the quests currently eligible under your saved rules.</li><li>After resolving the objective <b>in-game</b>, record <b>Complete</b>. For a quest that actually fails in Skyrim, choose <b>Mark failed</b> in its expanded details. <b>With Friends Like These...</b> has its own Astrid outcome controls. If an objective is only temporarily unavailable, choose <b>Suspend / Block</b>.</li></ol>
+<p class="guide-note-v2">For branching quests, expand the quest card and record the outcome you chose in Skyrim. The Arbiter excludes verified opposing paths but never chooses the moral decision. You can also save an outcome note for other quests.</p><p class="guide-note-v2">The catalogue cannot guarantee a quest is currently startable. Some NPC deaths and faction choices can block later quest starts; use the Cross-quest consequences panel to record them and confirm exceptions in Skyrim. Approval is your confirmation, not an automatic unlock.</p>
 <div class="row"><button type="button" class="small" data-guide-tab-v2="journal">Quest Journal</button><button type="button" class="small" data-guide-tab-v2="dashboard">Draw on Dashboard</button><button type="button" class="small" data-guide-tab-v2="blocked">Blocked quests</button></div>
 </details>
 <details class="sub release-doc1984" id="guideProgressV2"><summary><strong>4. Track character progression</strong> · levels, skills and perks</summary>
@@ -324,13 +326,16 @@
 <p class="muted" style="font-size:12px">Import replaces the expedition in this browser after you confirm. The Director can import compatible earlier version-1 expedition backups; unsupported or malformed files are rejected. Export your current progress first.</p>
 <div class="row" style="margin-top:12px"><button id="newExpedition" class="danger">Start new expedition</button></div>
 <p class="muted" style="font-size:12px">Starting a new expedition replaces local progress and requires two confirmations. Undo is session-based and is not a substitute for a saved backup.</p></article>
-<article class="panel" id="aboutBuild1984"><div class="row between"><h2>About The Fate Director</h2><span class="release-chip1984">PUBLIC RELEASE · v2.0</span></div>
+<article class="panel" id="aboutBuild1984"><div class="row between"><h2>About The Fate Director</h2><span class="release-chip1984">PUBLIC RELEASE · v2.1.1</span></div>
 <p><b>Skyrim — The Fate Director</b> is Survivor Incognito’s standalone expedition companion. <b>The Arbiter of Fate</b> is the name of the guiding presence behind Fate’s optional decisions, with its quest-decision controls under the <b>Arbiter</b> tab. You explore Skyrim; the Director helps you record progress and lets The Arbiter choose from eligible objectives and other decisions under rules you select.</p><p class="muted" style="font-size:12px">Unofficial fan-made companion; not affiliated with or endorsed by Bethesda. No game files, mods or installation are required.</p>
 <div class="release-card1984"><h3>What Fate can control</h3><p>Depending on your selections: eligible quest assignments, level-up attributes, available perk choices, and optional magic permissions. You can also track factions, discovered and completed quests, perks, learned spells, Dragon Shouts and expedition history.</p></div>
 <div class="release-card1984"><h3>What stays with the player</h3><p>You choose when to accept decisions, how much authority Fate has, what you discover naturally and how faithfully to apply its suggestions. Starting playstyle equipment guidance is not an automatic restriction. The Director <b>cannot read, edit or control</b> your Skyrim save or game world.</p></div>
 <div class="release-card1984"><h3>Supported game content and limits</h3><p>Edition choices cover Original, Legendary, Special and Anniversary Edition, with selectable DLC and Creation content. The catalogue is curated rather than an exhaustive authoritative database. Some quest start conditions, acquisitions and modded variants still need in-game confirmation; the Director deliberately requires manual approval for uncertain undiscovered quests.</p></div>
 <details class="sub release-doc1984" id="releaseNotes1984"><summary><strong>Version information &amp; recent changes</strong></summary>
 <ul>
+<li><b>v2.1.1:</b> Cross-quest consequences for Nilsine, Narfi, Vittoria Vici, Malborn, Ahtar and Orc Blood-Kin; Falkreath property warnings and player-confirmed eligibility checks. Version label removed from the title banner; release notes remain versioned.</li>
+<li><b>v2.1.0:</b> Player-confirmed branching choices for Dawnguard Bloodline, Civil War Jagged Crown, Dragonborn Thirsk, Anniversary Bittercup, Paarthurnax, Tribunal and Stalhrim; generic quest outcome notes; expanded eligibility exclusions. Includes the v2.0.1 Astrid fixes.</li>
+<li><b>v2.0.1:</b> Dark Brotherhood Abandoned Shack decision, distinct failed-quest tracking, route-wide faction restrictions and eligible destruction objective. No change to expedition backup schema.</li>
 <li><b>v2.0:</b> First public release. The Arbiter of Fate identity, Arbiter tab label, expanded How to Use guide, About and backup guidance; version-1 expedition save compatibility and Fate rules retained.</li>
 <li><b>v1.9.84:</b> Help, version information, release notes and backup/transfer guidance; no expedition rule or save-schema changes.</li>
 <li><b>v1.9.83:</b> Extended multi-character regression and fixes to cosmetic RNG and cancelled/undone Fate perk draws.</li>
@@ -342,9 +347,9 @@
 </ul></details>
 <details class="sub release-doc1984" id="releaseChecklist1984"><summary><strong>Release checks &amp; known limitations</strong></summary>
 <ul><li><b>Regression coverage:</b> automated expedition, magic, perk, shout, quest and JSON backup suites passed during pre-release testing. See the accompanying v2.0 test report for current-build coverage.</li><li><b>Verified by the project tester:</b> a previous-version backup imported, a character level-up saved, and that change persisted after closing and reopening Brave.</li><li><b>Still subject to game verification:</b> some Skyrim/Creation quest starting conditions, alternative outcomes, spell acquisitions and modded behaviour.</li><li><b>Browser note:</b> saving is local to the browser and storage location. Export JSON before transferring devices or switching between a local file and a hosted page.</li></ul></details>
-<p class="muted" style="font-size:12px">v2.0 application · Expedition backup schema v1 · Offline HTML · No account required · No connection to your Skyrim files. Updates and new file versions do not automatically sync progress across different browser storage locations.</p>
+<p class="muted" style="font-size:12px">v2.1.1 application · Expedition backup schema v1 · Offline HTML · No account required · No connection to your Skyrim files. Updates and new file versions do not automatically sync progress across different browser storage locations.</p>
 </article></section>
-</main><footer>Skyrim — The Fate Director · The Arbiter of Fate · v2.0 · Unofficial fan-made tool, not affiliated with Bethesda · Standalone offline HTML · No account required · No data sent to a server</footer><script>
+</main><footer>Skyrim — The Fate Director · The Arbiter of Fate · v2.1.1 · Unofficial fan-made tool, not affiliated with Bethesda · Standalone offline HTML · No account required · No data sent to a server</footer><script>
 'use strict';
 const KEY='si_fate_director_v01';
 const RACES=['Argonian','Breton','Dark Elf (Dunmer)','High Elf (Altmer)','Imperial','Khajiit','Nord','Orc (Orsimer)','Redguard','Wood Elf (Bosmer)'];
@@ -505,7 +510,7 @@ const ANNIVERSARY_STARTS={"cc_new_01": "Investigate the Ratway", "cc_new_03": "I
 const ANNIVERSARY_DIRECTIONS={"cc_new_01": "Search the Ratway in Riften for the quest lead.", "cc_new_03": "Explore Runoff Caverns and follow the Dwemer clues."};
 function questStart(q){return state.questGivers?.[q.id] ?? ACCURACY_STARTS_V1915[q.id]?.[0] ?? COVERAGE_LEADS_V1916[q.name]?.[0] ?? SKAAL_THIRSK_EVIDENCE_V1932[q.name]?.start ?? q.giver ?? QUEST_STARTS[q.id] ?? EXTRA_STARTS[q.id] ?? ANNIVERSARY_STARTS[q.id] ?? REPAIR_V1912[q.name]?.[0] ?? REPAIR_V1911[q.name]?.[0] ?? ''}
 function questDirections(q){return state.questDirections?.[q.id] ?? ACCURACY_STARTS_V1915[q.id]?.[1] ?? COVERAGE_LEADS_V1916[q.name]?.[1] ?? SKAAL_THIRSK_EVIDENCE_V1932[q.name]?.start ?? q.directions ?? QUEST_DIRECTIONS[q.id] ?? EXTRA_DIRECTIONS[q.id] ?? ANNIVERSARY_DIRECTIONS[q.id] ?? REPAIR_V1912[q.name]?.[1] ?? REPAIR_V1911[q.name]?.[1] ?? ''}
-const defaultState=()=>({version:1,edition:'anniversary',installed:['Base Game','Dawnguard','Hearthfire','Dragonborn','Creation Club','Custom'],enabledSources:[...SOURCES],enabledCategories:[...CATEGORIES],balanced:true,objectiveMode:"discovered",discoveredWeight:60,allowUndiscovered:false,approvedUnknown:[],branches:{civil:'none',daw:'none',brother:'none'},memberships:{},character:{name:'',race:'Argonian',style:'Mage',level:1,health:100,magicka:100,stamina:100,perkPoints:0},attributes:['Health','Magicka','Stamina'],quests:{},questGivers:{},questDirections:{},blockReasonsV1966:{},custom:[],active:null,history:[],rng:123456789,recentCategories:[],eligiblePerks:'Novice Destruction\nNovice Restoration\nNovice Conjuration',skills:{},ownedPerks:[],transformation:{type:'none',werewolf:{points:0,owned:[]},vampire:{points:0,owned:[]}},shoutTrackerV1974:{words:{},favourites:[],customShouts:[]},perkFocus:["Alchemy", "Alteration", "Archery", "Block", "Conjuration", "Destruction", "Enchanting", "Heavy Armor", "Illusion", "Light Armor", "Lockpicking", "One-Handed", "Pickpocket", "Restoration", "Smithing", "Sneak", "Speech", "Two-Handed"],magicDirectorV1968:{mode:'manual',followPerkFocus:true,manualSchools:['Alteration','Conjuration','Destruction','Illusion','Restoration'],protectedSchools:[],fateSchools:[],drawBasis:'',knownSpells:[],favourites:[],customSpells:[],questGatesV1969:[],questGatesEnabledV1969:false,fateRankModeV1971:'progression'}});
+const defaultState=()=>({version:1,edition:'anniversary',installed:['Base Game','Dawnguard','Hearthfire','Dragonborn','Creation Club','Custom'],enabledSources:[...SOURCES],enabledCategories:[...CATEGORIES],balanced:true,objectiveMode:"discovered",discoveredWeight:60,allowUndiscovered:false,approvedUnknown:[],branches:{civil:'none',daw:'none',brother:'none'},branchChoicesV210:{},questOutcomesV210:{},memberships:{},character:{name:'',race:'Argonian',style:'Mage',level:1,health:100,magicka:100,stamina:100,perkPoints:0},attributes:['Health','Magicka','Stamina'],quests:{},questGivers:{},questDirections:{},blockReasonsV1966:{},custom:[],active:null,history:[],rng:123456789,recentCategories:[],eligiblePerks:'Novice Destruction\nNovice Restoration\nNovice Conjuration',skills:{},ownedPerks:[],transformation:{type:'none',werewolf:{points:0,owned:[]},vampire:{points:0,owned:[]}},shoutTrackerV1974:{words:{},favourites:[],customShouts:[]},perkFocus:["Alchemy", "Alteration", "Archery", "Block", "Conjuration", "Destruction", "Enchanting", "Heavy Armor", "Illusion", "Light Armor", "Lockpicking", "One-Handed", "Pickpocket", "Restoration", "Smithing", "Sneak", "Speech", "Two-Handed"],magicDirectorV1968:{mode:'manual',followPerkFocus:true,manualSchools:['Alteration','Conjuration','Destruction','Illusion','Restoration'],protectedSchools:[],fateSchools:[],drawBasis:'',knownSpells:[],favourites:[],customSpells:[],questGatesV1969:[],questGatesEnabledV1969:false,fateRankModeV1971:'progression'}});
 // v1.9.63 — non-destructive compatibility normalisation for earlier version-1 saves.
 // Unknown progress fields, quest IDs, and custom records survive import/export untouched.
 function normalizeExpeditionV1963(input){
@@ -569,6 +574,8 @@ function normalizeExpeditionV1963(input){
  if(!Array.isArray(magic.questGatesV1969))magic.questGatesV1969=[];
  magic.questGatesV1969=magic.questGatesV1969.filter(r=>obj(r)&&typeof r.id==='string'&&typeof r.questId==='string'&&typeof r.questName==='string'&&names.includes(r.school)&&['Apprentice','Adept','Expert','Master'].includes(r.rank)).slice(0,100).map(r=>({...r,unlocked:r.unlocked===true}));
  out.branches={...defaults.branches,...out.branches};
+  // v2.1.0: preserve older JSON backups; malformed optional choices never erase other fields.
+  for(const key of ['branchChoicesV210','questOutcomesV210','crossChoicesV211','crossVerifiedV211'])if(!obj(out[key]))out[key]={};
  out.character={...defaults.character,...(obj(input.character)?input.character:{})};
  if(!Number.isFinite(out.character.level)||out.character.level<1)out.character.level=defaults.character.level;
  if(!['discovered','available','mixed'].includes(out.objectiveMode))out.objectiveMode=input.allowUndiscovered?'mixed':'discovered';
@@ -1425,8 +1432,8 @@ function factionSafetyV1938(q){
  }
  if(name==='Destroy the Dark Brotherhood!'){
   if(state.branches?.brother==='join'||completedByName('Sanctuary'))out.push('Dark Brotherhood join route already selected');
-  // Choice in the Abandoned Shack cannot be inferred from completion of Innocence Lost.
-  out.push('Requires killing Astrid in With Friends Like These...; this choice is not tracked automatically');
+  // v2.0.1: the explicit Astrid decision gate below now controls availability.
+  // Do not add the old unconditional blocker after that decision is confirmed.
  }
  if(name==='With Friends Like These...'&&state.branches?.brother==='destroy'&&completedByName('Destroy the Dark Brotherhood!'))out.push('Dark Brotherhood destruction path already completed');
  if(name==='The Dark Brotherhood Forever'&&state.branches?.brother==='destroy')out.push('Dark Brotherhood was destroyed');
@@ -1439,26 +1446,64 @@ function factionSafetyV1938(q){
  return out;
 }
 
-// v1.9.53: explicit Abandoned Shack decision; never infer the choice from faction membership alone.
+// v2.0.1 — Dark Brotherhood route is player-confirmed. Fate never chooses an outcome.
 const DB_DECISION_V1942={unknown:'Not yet confirmed',join:'Spared Astrid and joined the Dark Brotherhood',destroy:'Killed Astrid and opposed the Dark Brotherhood'};
+const DB_SHACK_NAME_V201='With Friends Like These...';
+const DB_DESTROY_NAME_V201='Destroy the Dark Brotherhood!';
+// Exclusively Brotherhood membership quests, not Innocence Lost or the optional pre-joining Delayed Burial.
+const DB_JOIN_QUESTS_V201=new Set(['Sanctuary','Mourning Never Comes','Whispers in the Dark','The Silence Has Been Broken','Bound Until Death','Breaching Security','The Cure for Madness','Recipe for Disaster','To Kill an Empire','Death Incarnate','Hail Sithis!','Honor Thy Family','The Dark Brotherhood Forever','Dark Brotherhood Forever']);
+function isDbShackQuestV201(q){return !!q&&q.source==='Base Game'&&q.name===DB_SHACK_NAME_V201;}
+function isDbJoinQuestV201(q){return q.source==='Base Game'&&(DB_JOIN_QUESTS_V201.has(q.name)||DB_CONTRACTS_V1938.has(q.name.toLowerCase().replace(/[’‘]/g,"'")));}
 function dbDecisionProblemsV1942(q){
+ if(q.source!=='Base Game')return [];
  const n=q.name,choice=state.dbAstridDecision||'unknown',out=[];
- if(n==='Destroy the Dark Brotherhood!'){
+ if(n===DB_DESTROY_NAME_V201){
   if(choice!=='destroy')out.push('Confirm that Astrid was killed in the Abandoned Shack');
   if(completedByName('Sanctuary')||state.branches?.brother==='join')out.push('Incompatible with the joined Dark Brotherhood route');
  }
- if(n==='With Friends Like These...'&&choice!=='unknown')out.push('Abandoned Shack decision has already been recorded; check quest journal status');
- if(n==='The Dark Brotherhood Forever'||n==='Sanctuary'||DB_CONTRACTS_V1938.has(n.toLowerCase().replace(/[’‘]/g,"'"))){
-  if(choice==='destroy')out.push('Astrid was killed; the Dark Brotherhood questline is unavailable');
-  if(choice==='unknown'&&n!=='Sanctuary')out.push('Confirm the Abandoned Shack join decision');
+ if(n===DB_SHACK_NAME_V201&&choice!=='unknown')out.push('Abandoned Shack decision already recorded; this quest has been resolved');
+ if(isDbJoinQuestV201(q)){
+  if(choice==='destroy'||state.branches?.brother==='destroy')out.push('Astrid was killed; the Dark Brotherhood joining questline is unavailable');
+  else if(choice==='unknown'&&n!=='Sanctuary')out.push('Confirm the Abandoned Shack join decision before drawing later Brotherhood quests');
  }
  return out;
+}
+function openDbShackDecisionV201(id){
+ const q=byId(id);if(!isDbShackQuestV201(q))return;
+ $('journalFilter').value='discovered';$('librarySearch').value=q.name;
+ journalExpandedIdV1967=all().find(x=>isDbShackQuestV201(x))?.id||id;
+ changeTab('journal');
+ notice('Choose the actual Abandoned Shack outcome in the expanded quest. Fate does not decide for you.');
+}
+function resolveDbShackV201(id,choice){
+ const q=byId(id);if(!isDbShackQuestV201(q)||!['join','destroy'].includes(choice))return;
+ if(!['discovered','assigned'].includes(status(id))){notice('Discover With Friends Like These... before recording its outcome.');return;}
+ if(state.active&&!siblings(id).some(x=>x.id===state.active)){
+  if(!confirm('Fate currently has another assigned objective. Your expedition rules may prohibit resolving this quest now. Record the actual in-game outcome anyway?'))return;
+ }
+ const destroy=choice==='destroy';
+ if(!confirm(destroy
+  ?'Confirm you killed Astrid. With Friends Like These... will be recorded as FAILED, Destroy the Dark Brotherhood! will be discovered, and joining quests excluded. Continue?'
+  :'Confirm you spared Astrid and completed the initiation. With Friends Like These... will be COMPLETED, and the destruction route excluded. Continue?'))return;
+ commit(destroy?'Failed quest / Dark Brotherhood choice':'Completed quest / Dark Brotherhood choice',q.name+' — '+(destroy?'killed Astrid; destruction route':'spared Astrid; joined route'),()=>{
+  // Clear assignment aliases before applying a terminal result; preserve unrelated assignments.
+  clearAliasAssignmentV1964(id);
+  for(const alias of siblings(id))if(['completed','failed','assigned','discovered'].includes(state.quests[alias.id]))delete state.quests[alias.id];
+  state.quests[id]=destroy?'failed':'completed';
+  state.dbAstridDecision=choice;
+  state.branches={...state.branches,brother:choice};
+  if(destroy){
+   const next=all().find(x=>x.source==='Base Game'&&x.name===DB_DESTROY_NAME_V201);
+   if(next&&status(next.id)==='unknown')state.quests[next.id]='discovered';
+  }
+ });
+ notice(destroy?'Astrid killed. Quest failed; the destruction objective is discovered and may be drawn when eligible.':'Astrid spared. Quest completed; the joining route is recorded.');
 }
 function renderBrotherhoodV1942(){
  const el=$('brotherhood1942');if(!el)return;
  const choice=state.dbAstridDecision||'unknown';
- el.innerHTML='<h4>Dark Brotherhood route decision — v1.9.53</h4><p>Record what happened to Astrid in the Abandoned Shack. This is an explicit player confirmation; it cannot be inferred from quest discovery.</p><label>Abandoned Shack outcome</label><select id="dbAstridDecision1942">'+Object.entries(DB_DECISION_V1942).map(([k,v])=>'<option value="'+k+'" '+(choice===k?'selected':'')+'>'+esc(v)+'</option>').join('')+'</select><p class="muted">Changing this setting does not automatically mark a quest completed. If you chose to destroy the Brotherhood, also set the main Brotherhood faction branch to Destroy for consistency. Nazir offers are not proof of contract prerequisites.</p>';
- $('dbAstridDecision1942').onchange=e=>{const value=e.target.value;commit('Dark Brotherhood route','Astrid decision: '+value,()=>{state.dbAstridDecision=value;});};
+ el.innerHTML='<h4>Dark Brotherhood route — v2.0.1</h4><p><b>Recorded Abandoned Shack outcome:</b> '+esc(DB_DECISION_V1942[choice]||DB_DECISION_V1942.unknown)+'</p><p class="muted">Resolve this story choice in the Quest Journal once you encounter it in Skyrim. A recorded choice changes eligibility; it does not automatically complete any later quest. Existing expedition decisions are preserved on import.</p><button type="button" class="small" id="openDbJournalV201">Open With Friends Like These... in Quest Journal</button>';
+ $('openDbJournalV201').onclick=()=>{const q=all().find(x=>isDbShackQuestV201(x));if(!q)return; if(status(q.id)==='unknown'){$('journalFilter').value='all';$('librarySearch').value=q.name;journalExpandedIdV1967=q.id;changeTab('journal');}else if(['completed','failed'].includes(status(q.id))){$('journalFilter').value='completed';$('librarySearch').value=q.name;journalExpandedIdV1967=q.id;changeTab('journal');}else openDbShackDecisionV201(q.id)};
 }
 
 function factionAuditV1938(){
@@ -2770,14 +2815,234 @@ const AE_VERIFIED_QUESTS_V1959=[
 // These journal quests cannot be approved as unknown; confirm discovery in Skyrim first.
 const AE_DISCOVERY_IDS_V1959=new Set([...AE_VERIFIED_QUESTS_V1959,...AE_EXPANSION_QUESTS_V1960,...AE_RADIANT_QUESTS_V1961].map(x=>x.id).concat(['cc197_fishing01','cc197_fishing02',...AE_BITTERCUP_QUESTS_V1962.map(x=>x.id)]));
 function aeDiscoveryProblemsV1959(q,simulatedStatus=null){if(!AE_DISCOVERY_IDS_V1959.has(q.id))return [];const st=simulatedStatus?simulatedStatus(q.id):status(q.id);return st==='unknown'?['Record actual in-game journal discovery before Fate can draw this Anniversary Edition quest']:[];}
-const rawCatalogue=()=>[...AE_BITTERCUP_QUESTS_V1962,...AE_RADIANT_QUESTS_V1961,...AE_EXPANSION_QUESTS_V1960,...AE_VERIFIED_QUESTS_V1959,...RITUAL_RECORDS_V1941,...SKAAL_BATCH_V1933,...RAVEN_BATCH_V1931,...RAVEN_ROCK_BATCH_V1930,...TEL_MITHRYN_BATCH_V1929,...TEL_MITHRYN_BATCH_V1928,...SOLSTHEIM_BATCH_V1927,...SOLSTHEIM_MISC_V1926,...DAW_BATCH_V1925,...FACTION_BATCH_V1924,...VERIFIED_FACTION_BATCH_V1923,...RECONCILED_QUESTS_V1921,...BASE,...EXPANDED,...ANNIVERSARY_ADDITIONS,...BASE_V12,...QUEST_BATCH_V16,...QUEST_BATCH_V17,...QUEST_GAP_BATCH_V196,...QUEST_BATCH_V197,...REPAIR_QUESTS_V1911,...REPAIR_QUESTS_V1912,...COVERAGE_QUESTS_V1916,...state.custom];
+// v2.1.0 — player-owned storyline decisions. Fate only draws eligible quests.
+// Explicit choices never consume the seed, automatically assign follow-ups, or imply that Skyrim has been modified.
+// v2.1.1: only individually identifiable optional Skyrim journal objectives, with conservative discovery.
+const CROSS_QUESTS_V211=[
+ {id:'cross211_straw',name:'The Straw that Broke',source:'Base Game',category:'Miscellaneous',location:'Ivarstead',requires:[],giver:'Narfi — across the river in Ivarstead',directions:'Ask Narfi about his missing sister Reyda and investigate the river. If Narfi has died before you start, this favour cannot be obtained.'},
+ {id:'cross211_wine',name:'The Spiced Wine',source:'Base Game',category:'Miscellaneous',location:'Solitude',requires:[],giver:'Evette San — Solitude market',directions:'Ask Evette San about her shipment, then negotiate with Vittoria Vici before Bound Until Death.'},
+ {id:'cross211_helvard',name:'Contract: Kill Helvard',source:'Base Game',category:'Faction',location:'Falkreath',requires:[],giver:'Nazir — Dark Brotherhood Sanctuary',directions:'Only when Nazir offers the contract. Killing Helvard can affect Siddgeir and access to Lakeview Manor; check property arrangements first.'},
+ {id:'cross211_malborn',name:'Find the Thalmor Assassin',source:'Base Game',category:'Miscellaneous',location:'Windhelm',requires:['mq202'],giver:'Malborn — New Gnisis Cornerclub',directions:'Only after Diplomatic Immunity, if Malborn survived. Talk to him in Windhelm and confirm he actually offers this favour.'},
+ {id:'cross211_ahtar',name:'Kill the Bandit Leader for Ahtar',source:'Base Game',category:'Miscellaneous',location:'Solitude / quest-selected bandit lair',requires:[],giver:'Ahtar — Castle Dour, Solitude',directions:'Talk to Ahtar to verify the actual bounty target. Captain Hargar is the usual Broken Oar Grotto target; some game states can change availability or location.'}
+];
+const BRANCH_QUESTS_V210=[{
+ id:'branch210_stalhrim_sale',name:'Sell Stalhrim Armor and Weapons to Ancarion',source:'Dragonborn',
+ category:'Miscellaneous',location:'Northshore Landing',requires:[],
+ giver:'Ancarion — after agreeing to provide Stalhrim equipment',
+ directions:'Only available if Ancarion accepted your deal during A New Source of Stalhrim. Record this objective when it appears in Skyrim.'
+}];
+const BRANCH_DEFINITIONS_V210={
+ 'Dawnguard|Bloodline':{title:'Bloodline — Harkon\'s offer',key:'bloodline',explain:'Accept or refuse Harkon only in Skyrim. The result selects the faction route; a follow-up still needs to appear in your journal.',choices:[['dawnguard','Refused Harkon · Dawnguard'],['vampire','Accepted Harkon · Volkihar']]},
+ 'Base Game|The Jagged Crown':{title:'The Jagged Crown — final allegiance',key:'jagged',explain:'You may hand the crown to the opposite leader and defect once. Record the actual recipient; previous completed recruitment quests remain in the Chronicle.',choices:[['imperial','Gave crown to General Tullius'],['stormcloak','Gave crown to Ulfric Stormcloak']]},
+ 'Dragonborn|Retaking Thirsk':{title:'Thirsk Mead Hall — who prevailed?',key:'thirsk',explain:'Record only after the battle settles. The opposing quest is unavailable, and previously discovered opposing quests can be marked failed.',choices:[['nords','The Nords retook Thirsk'],['rieklings','The Rieklings kept Thirsk']]},
+ 'Dragonborn|The Chief of Thirsk Hall':{title:'Thirsk Mead Hall — who prevailed?',key:'thirsk',explain:'Record only after the battle settles. The opposing quest is unavailable, and previously discovered opposing quests can be marked failed.',choices:[['nords','The Nords retook Thirsk'],['rieklings','The Rieklings kept Thirsk']]},
+ 'Creation Club|A Dying Wish':{title:'Bittercup — altar selection',key:'bittercup',explain:'Only record an altar you actually used. Fortune and Power have distinct follow-up quests; Nothing continues A Dying Wish. Discover follow-ups when they appear in Skyrim.',choices:[['fortune','Altar of Fortune'],['power','Altar of Power'],['nothing','Altar of Nothing']]},
+ 'Base Game|Paarthurnax':{title:'Paarthurnax — the dragon\'s fate',key:'paarthurnax',explain:'Sparing him may leave the Skyrim quest outstanding. Recording mercy does not pretend it is completed or permanently failed. Dragon Hunting needs independent in-game confirmation.',choices:[['spared','Spared Paarthurnax'],['killed','Killed Paarthurnax']]},
+ 'Creation Club|Ghosts of the Tribunal':{title:'Ghosts of the Tribunal — temple approach',key:'tribunal',explain:'Record your approach for the Chronicle. Exact hostile-route prerequisites are not sufficiently verified; the Arbiter will NOT automatically forbid temple follow-ups on this setting alone.',choices:[['cooperate','Worked with the Temple'],['hostile','Opposed the Temple']]},
+ 'Creation Club|The Ghosts of the Tribunal':{title:'Ghosts of the Tribunal — temple approach',key:'tribunal',explain:'The alternative catalogue spelling shares this choice. No unverified follow-up gates are inferred.',choices:[['cooperate','Worked with the Temple'],['hostile','Opposed the Temple']]},
+ 'Dragonborn|A New Source of Stalhrim':{title:'A New Source of Stalhrim — Ancarion',key:'stalhrim',explain:'Making a deal opens the optional sell-Stalhrim objective. Otherwise it does not become available. Record the actual method used to obtain the map.',choices:[['deal','Agreed to sell Stalhrim'],['other','No deal made']]}
+};
+// v2.1.1 — cross-quest consequences, always based on an actual player-confirmed event.
+// A blocked start is NOT the same thing as forcibly failing an already active journal quest.
+const CROSS_CHOICES_V211={
+ 'Base Game|Mourning Never Comes':{key:'nilsine',title:'Optional assassination — Nilsine Shatter-Shield',hint:'Her death causes Tova to die and can stop Blood on the Ice from starting. If that quest was already started, confirm its actual status before letting Fate draw it.',choices:[['spared','Nilsine spared'],['killed','Nilsine killed']]},
+ 'Base Game|Diplomatic Immunity':{key:'malborn',title:'Malborn — did he survive?',hint:'The later Windhelm favour Find the Thalmor Assassin requires Malborn to escape alive, and Diplomatic Immunity must be complete.',choices:[['alive','Malborn survived'],['dead','Malborn did not survive']]},
+ 'Base Game|Kill the Bandit Leader for Ahtar':{key:'ahtar',title:'Ahtar — confirm the actual offered target',hint:'This quest uses an NPC favour slot. Captain Hargar may already have died during Lights Out!; verify whether Ahtar instead offered another target in your game.',choices:[['hargar','Ahtar assigned Captain Hargar'],['other','Ahtar offered another live target'],['unavailable','Ahtar offers no current quest']]},
+ 'Base Game|The Forgemaster’s Fingers':{key:'bloodkin',title:'Orc Blood-Kin status',hint:'Orcs have stronghold access from the start. Non-Orcs who already earned Blood-Kin through other favours normally cannot start this quest. An already active quest requires separate confirmation.',choices:[['no','Not yet Blood-Kin'],['yes','Already Blood-Kin']]}
+};
+function crossChoiceDefinitionV211(q){return CROSS_CHOICES_V211[q?.source+'|'+q?.name]||null;}
+function crossRiskV211(q){
+ if(!q||q.source!=='Base Game')return null;
+ const c=state.crossChoicesV211||{},st=status(q.id),started=st==='discovered'||st==='assigned';
+ if(q.name==='Blood on the Ice'&&c.nilsine==='killed')return {token:'nilsine-killed',text:'Nilsine was killed; Bethesda documents that Tova\'s death prevents a NEW Blood on the Ice quest from starting. If your quest had already begun, verify it can still progress.',strict:!started};
+ if(q.name==='The Straw that Broke'&&completedByName('Contract: Kill Narfi'))return {token:'narfi-contract-completed',text:'Narfi was killed for his contract. His missing-sister favour cannot be started afterwards. An existing objective needs in-game confirmation.',strict:!started};
+ if(q.name==='The Spiced Wine'&&completedByName('Bound Until Death'))return {token:'vittoria-killed',text:'Vittoria Vici died in Bound Until Death; the wine favour must be handled before her death. Confirm an existing journal objective is still possible.',strict:!started};
+ if(q.name==='The Forgemaster’s Fingers'&&(state.character.race==='Orc (Orsimer)'||c.bloodkin==='yes'))return {token:'orc-bloodkin-'+state.character.race+'-'+(c.bloodkin||''),text:'Orcs and players who already possess Blood-Kin status normally cannot START this stronghold initiation. A quest already in the journal may still be in progress.',strict:!started};
+ if(q.name==='Kill the Bandit Leader for Ahtar'){
+  if(c.ahtar==='unavailable')return {token:'ahtar-unavailable',text:'Ahtar has no current offer in your Skyrim save.',strict:true};
+  if(!c.ahtar)return {token:'ahtar-unconfirmed',text:'Confirm Ahtar has actually offered a live bandit-leader objective before Fate can assign it.',strict:true};
+  if(c.ahtar==='hargar'&&completedByName('Lights Out!'))return {token:'hargar-after-lightsout',text:'Lights Out! normally kills Captain Hargar. Check whether this assignment already started or an alternative target is available.',strict:!started};
+ }
+ return null;
+}
+function crossQuestProblemsV211(q){
+ if(!q)return [];
+ const c=state.crossChoicesV211||{};
+ if(q.source==='Base Game'&&q.name==='Find the Thalmor Assassin'){
+  if(!completedByName('Diplomatic Immunity'))return ['Complete Diplomatic Immunity first'];
+  if(c.malborn!=='alive')return [c.malborn==='dead'?'Malborn died; his Windhelm favour cannot start':'Confirm that Malborn survived Diplomatic Immunity'];
+ }
+ const risk=crossRiskV211(q);
+ if(!risk)return [];
+ // Strict new-start restrictions cannot be bypassed by approving an undiscovered title.
+ if(risk.strict&&status(q.id)==='unknown')return [risk.text];
+ if(risk.strict&&risk.token==='ahtar-unavailable')return [risk.text];
+ // Discovered quest: permit a deliberate post-event in-game verification, never silently assume failure.
+ if(status(q.id)==='discovered'&&state.crossVerifiedV211?.[questKey(q)]!==risk.token)return ['Re-check this discovered quest in Skyrim: '+risk.text];
+ return [];
+}
+function crossQuestWarningsV211(q){
+ if(!q)return [];
+ const out=[];
+ const risk=crossRiskV211(q);
+ if(risk)out.push(risk.text);
+ if((q.source==='Base Game'&&/Falkreath/i.test(q.name)&&/thane/i.test(q.name))||(q.source==='Hearthfire'&&q.name==='Build a Hearthfire home')){
+  if(completedByName('Contract: Kill Helvard'))out.push('Helvard was killed. Lakeview Manor purchase may be affected under Jarl Siddgeir. Check whether you already own the land and which Jarl is in power; Dengeir may provide an alternative. Do not assume Falkreath thaneship or all Hearthfire homes are blocked.');
+ }
+ if(q.source==='Base Game'&&q.name==='Contract: Kill Helvard')out.push('Before completing this contract, consider the consequences for Siddgeir\'s disposition and purchasing Lakeview Manor. Existing ownership and alternate Jarls matter.');
+ if(q.source==='Base Game'&&q.name==='Lights Out!')out.push('Clearing Broken Oar Grotto normally kills Captain Hargar, which can affect Ahtar\'s separate favour. Complete or confirm his assignment first if it matters to your expedition.');
+ if(q.source==='Base Game'&&q.name==='The Forgemaster’s Fingers')out.push('Blood-Kin can also be awarded by other Orc favours; the Arbiter cannot automatically detect them.');
+ return out;
+}
+function recordCrossChoiceV211(id,choice){
+ const q=byId(id),def=crossChoiceDefinitionV211(q);
+ if(!q||!def||!def.choices.some(([v])=>v===choice))return;
+ if(def.key!=='bloodkin'&&def.key!=='ahtar'&&status(id)==='unknown'){
+  notice('Discover the related quest before recording this outcome.');return;
+ }
+ const old=state.crossChoicesV211?.[def.key]||'';
+ if(old===choice)return;
+ const label=def.choices.find(([v])=>v===choice)[1];
+ if(!confirm('Confirm this is true in your current Skyrim save: '+label+'. The Arbiter may withhold affected quests pending in-game verification. Continue?'))return;
+ commit('Cross-quest decision',q.name+' — '+label,()=>{
+  state.crossChoicesV211??={};state.crossChoicesV211[def.key]=choice;
+  state.crossVerifiedV211??={}; // Previously verified outcomes are not proof after changed circumstances.
+  if(def.key==='nilsine')for(const x of all())if(x.name==='Blood on the Ice')delete state.crossVerifiedV211[questKey(x)];
+  if(def.key==='bloodkin')for(const x of all())if(x.name==='The Forgemaster’s Fingers')delete state.crossVerifiedV211[questKey(x)];
+  if(def.key==='ahtar')for(const x of all())if(x.name==='Kill the Bandit Leader for Ahtar')delete state.crossVerifiedV211[questKey(x)];
+ });
+ notice('Recorded. Related quests will use the confirmed outcome; no other quest was silently completed or failed.');
+}
+function confirmCrossQuestV211(id){
+ const q=byId(id),risk=crossRiskV211(q);
+ if(!q||!risk||status(id)!=='discovered')return;
+ if(!confirm('Have you verified in your current Skyrim save, AFTER the relevant event, that '+q.name+' remains active and completable? Only confirm if you can actually continue it in-game.'))return;
+ commit('Quest still available — verified',q.name+' · '+risk.token,()=>{state.crossVerifiedV211??={};state.crossVerifiedV211[questKey(q)]=risk.token;});
+}
+function crossPanelV211(q){
+ const d=crossChoiceDefinitionV211(q),risk=crossRiskV211(q),warnings=crossQuestWarningsV211(q);
+ if(!d&&!risk&&!warnings.length)return '';
+ let html='<section class="cross-panel-v211"><h3>Cross-quest consequences</h3>';
+ if(d){const selected=state.crossChoicesV211?.[d.key]||'';
+  html+='<p>'+esc(d.title)+'</p><p class="muted">'+esc(d.hint)+'</p><div class="row">'+d.choices.map(([v,label])=>'<button class="small" type="button" data-action="crossV211" data-id="'+esc(q.id)+'" data-choice="'+esc(v)+'">'+esc(label)+(v===selected?' ✓':'')+'</button>').join('')+'</div>';
+ }
+ for(const note of warnings)html+='<p class="muted">'+esc(note)+'</p>';
+ if(risk&&status(q.id)==='discovered'){
+  const done=state.crossVerifiedV211?.[questKey(q)]===risk.token;
+  html+='<p class="muted">'+(done?'Current risk was verified after the event.':'If this quest began before the conflicting event, you may verify it still works in Skyrim.')+'</p>';
+  if(!done)html+='<button type="button" class="small" data-action="crossConfirmV211" data-id="'+esc(q.id)+'">Confirm still available in Skyrim</button>';
+ }
+ return html+'</section>';
+}
+
+const DAW_V210_HUNTER=new Set(['A New Order','Ancient Technology','Bolstering the Ranks','Hide and Seek','Preemptive Strike','Cleansing Light','Lost Relic','Hunting the Monster','Rescue','Dawnguard: Rescue','Dawnguard: Cleansing Light']);
+const DAW_V210_VOLKIHAR=new Set(['The Bloodstone Chalice','The Gift','The Hunt','New Allegiances','Deceiving the Herd','Protecting the Bloodline','Rings of Blood Magic','Amulets of Night Power','Destroying the Dawnguard','Culling the Beast']);
+const THIRSK_NORD_FOLLOWUPS_V210=new Set(['Bring 50 Riekling Spears to Hilund','Bring 10 Stalhrim Ore and 15 Ebony Ingots to Halbarn','Bring Elmus some Juniper Berries']);
+const BRANCH_RECORD_KEYS_V210={bloodline:'daw',jagged:'civil',bittercup:'bittercupChoiceV1962'};
+function branchDefinitionV210(q){return BRANCH_DEFINITIONS_V210[q?.source+'|'+q?.name]||null;}
+function branchValueV210(d){
+ if(d.key==='bloodline')return state.branches?.daw||'';
+ if(d.key==='jagged')return state.branchChoicesV210?.jagged||'';
+ if(d.key==='bittercup')return state.bittercupChoiceV1962||'';
+ return state.branchChoicesV210?.[d.key]||'';
+}
+function branchProblemsV210(q){
+ if(!q)return [];
+ const out=[],side=state.branches?.daw||'none',civil=state.branches?.civil||'none',thirsk=state.branchChoicesV210?.thirsk||'';
+ if(q.source==='Dawnguard'){
+  if(DAW_V210_HUNTER.has(q.name)&&side!=='dawnguard')out.push(side==='vampire'?'Dawnguard path excluded after accepting Harkon':'Confirm refusing Harkon during Bloodline');
+  if(DAW_V210_VOLKIHAR.has(q.name)&&side!=='vampire')out.push(side==='dawnguard'?'Volkihar path excluded after refusing Harkon':'Confirm accepting Harkon during Bloodline');
+ }
+ if(q.source==='Dragonborn'){
+  if(q.name==='Retaking Thirsk'&&thirsk==='rieklings')out.push('Rieklings retained Thirsk; Nord objective unavailable');
+  if(q.name==='The Chief of Thirsk Hall'&&thirsk==='nords')out.push('Nords retook Thirsk; Riekling objective unavailable');
+  if(THIRSK_NORD_FOLLOWUPS_V210.has(q.name)&&thirsk==='rieklings')out.push('Nord Thirsk favours unavailable after the Riekling victory');
+  if(q.name==='Sell Stalhrim Armor and Weapons to Ancarion'&&state.branchChoicesV210?.stalhrim!=='deal')out.push('Only available after agreeing to Ancarion\'s Stalhrim deal');
+ }
+ if(q.source==='Base Game'){
+  if(q.name==='Paarthurnax'&&state.branchChoicesV210?.paarthurnax==='spared')out.push('Player chose not to kill Paarthurnax; quest not resolved as completed');
+  // A Crown hand-in can switch factions; an earlier recruitment completion is not a permanent faction lock.
+  if(q.name==='Joining the Legion'&&civil==='stormcloak'&&state.branchChoicesV210?.jagged==='stormcloak')out.push('The Jagged Crown was delivered to Ulfric');
+  if(q.name==='Joining the Stormcloaks'&&civil==='imperial'&&state.branchChoicesV210?.jagged==='imperial')out.push('The Jagged Crown was delivered to General Tullius');
+ }
+ return out;
+}
+function setOutcomeNoteV210(id){
+ const q=byId(id);if(!q||status(id)==='unknown')return;
+ const key=questKey(q),current=state.questOutcomesV210?.[key]||'';
+ const note=prompt('Record the outcome you actually chose for '+q.name+' (blank to clear). This is for your Chronicle only and does not impose unverified quest restrictions.',current);
+ if(note===null||note===current)return;
+ if(note.length>1000){notice('Keep outcome notes under 1,000 characters.');return;}
+ commit('Quest outcome noted',q.name+(note.trim()?' — '+note.trim():' — cleared'),()=>{state.questOutcomesV210??={};if(note.trim())state.questOutcomesV210[key]=note.trim();else delete state.questOutcomesV210[key]});
+}
+function openBranchDecisionV210(id){const q=byId(id);if(!q)return;const group=journalGroupV1967(q);$('journalFilter').value=group==='completed'?'completed':group==='discovered'?'discovered':'all';$('librarySearch').value=q.name;journalExpandedIdV1967=all().find(x=>x.source===q.source&&x.name===q.name)?.id||id;changeTab('journal');notice('Resolve this branch using the outcome you actually selected in Skyrim.');}
+function resolveBranchV210(id,choice){
+ const q=byId(id),d=branchDefinitionV210(q);
+ if(!q||!d||!d.choices.some(x=>x[0]===choice))return;
+ const st=status(id),old=branchValueV210(d);
+ if(!['discovered','assigned','completed','failed'].includes(st)){notice('Discover this quest in Skyrim before recording its outcome.');return;}
+ if(old&&old!==choice&&!confirm('A different outcome has already been recorded. Correct it only if your Skyrim game actually changed or the previous entry was mistaken. Continue?'))return;
+ const finalQuest=['bloodline','jagged','thirsk'].includes(d.key)||(d.key==='paarthurnax'&&choice==='killed');
+ if(finalQuest&&state.active&&state.active!==id&&!siblings(id).some(x=>x.id===state.active)){
+  if(!confirm('Another quest is currently assigned by Fate. Completing this one may break your expedition rule. Record what actually occurred anyway?'))return;
+ }
+ if(!confirm('Confirm this decision happened in Skyrim: '+d.choices.find(x=>x[0]===choice)[1]+'. '+(finalQuest?'This also records the corresponding quest resolution.':'This records the choice, but does not mark the quest completed.')+' Continue?'))return;
+ commit('Story branch decided',q.name+' — '+d.choices.find(x=>x[0]===choice)[1],()=>{
+  state.branchChoicesV210??={};
+  state.questOutcomesV210??={};
+  state.branchChoicesV210[d.key]=choice;
+  state.questOutcomesV210[questKey(q)]=d.choices.find(x=>x[0]===choice)[1];
+  if(d.key==='bloodline')state.branches={...state.branches,daw:choice};
+  if(d.key==='jagged'){
+   state.branches={...state.branches,civil:choice};
+   // Previous commander approvals could belong to the opposite army.
+   state.civilOffersV1943={};
+   state.civilStageV1944={};
+  }
+  if(d.key==='bittercup')state.bittercupChoiceV1962=choice;
+  if(d.key==='thirsk'){
+   const winner=all().find(x=>x.source==='Dragonborn'&&x.name===(choice==='nords'?'Retaking Thirsk':'The Chief of Thirsk Hall'));
+   const loser=all().find(x=>x.source==='Dragonborn'&&x.name===(choice==='nords'?'The Chief of Thirsk Hall':'Retaking Thirsk'));
+   if(winner){clearAliasAssignmentV1964(winner.id);for(const a of siblings(winner.id))if(['assigned','discovered','failed'].includes(state.quests[a.id]))delete state.quests[a.id];state.quests[winner.id]='completed';}
+   if(loser&&['discovered','assigned','completed','failed'].includes(status(loser.id))){clearAliasAssignmentV1964(loser.id);for(const a of siblings(loser.id))if(['discovered','assigned','completed','failed'].includes(state.quests[a.id]))delete state.quests[a.id];state.quests[loser.id]='failed';}
+  }else if(['bloodline','jagged'].includes(d.key)){
+   clearAliasAssignmentV1964(id);
+   for(const a of siblings(id))if(['discovered','assigned','failed'].includes(state.quests[a.id]))delete state.quests[a.id];
+   state.quests[id]='completed';
+  }else if(d.key==='paarthurnax'&&choice==='spared'&&siblings(id).some(a=>a.id===state.active)){
+   clearAliasAssignmentV1964(id);
+   for(const a of siblings(id))if(['discovered','assigned'].includes(state.quests[a.id]))delete state.quests[a.id];
+   state.quests[id]='blocked';
+   state.blockReasonsV1966??={};state.blockReasonsV1966[questKey(q)]='Player chose to spare Paarthurnax. This is a deliberate suspension, not an in-game quest failure.';
+  }else if(d.key==='paarthurnax'&&choice==='killed'){
+   if(state.blockReasonsV1966)delete state.blockReasonsV1966[questKey(q)];
+   // This quest may have remained pending for years; only the confirmed kill completes it.
+   clearAliasAssignmentV1964(id);
+   for(const a of siblings(id))if(['discovered','assigned','failed'].includes(state.quests[a.id]))delete state.quests[a.id];
+   state.quests[id]='completed';
+  }
+ });
+ notice('Story decision saved. The Arbiter will enforce verified exclusions, while follow-up quests must still be discovered or approved in your Skyrim expedition.');
+}
+function branchPanelV210(q,st){
+ const d=branchDefinitionV210(q);
+ if(!d)return '';
+ const chosen=branchValueV210(d);
+ const label=d.choices.find(x=>x[0]===chosen)?.[1]||'';
+ const editable=['discovered','assigned','completed','failed'].includes(st);
+ return '<section class="branch-choice-v210"><h3>'+esc(d.title)+'</h3><p class="muted">'+esc(d.explain)+'</p>'+
+ (label?'<p class="branch-accepted">Recorded: '+esc(label)+'</p>':'<p class="muted">No branch outcome recorded yet.</p>')+
+ (editable?'<div class="row">'+d.choices.map(([v,name])=>'<button type="button" class="small" data-action="branchV210" data-id="'+esc(q.id)+'" data-choice="'+esc(v)+'">'+esc(name)+(v===chosen?' ✓':'')+'</button>').join('')+'</div>':'<p class="muted">Discover this quest before recording the decision.</p>')+'</section>';
+}
+
+const rawCatalogue=()=>[...AE_BITTERCUP_QUESTS_V1962,...BRANCH_QUESTS_V210,...CROSS_QUESTS_V211,...AE_RADIANT_QUESTS_V1961,...AE_EXPANSION_QUESTS_V1960,...AE_VERIFIED_QUESTS_V1959,...RITUAL_RECORDS_V1941,...SKAAL_BATCH_V1933,...RAVEN_BATCH_V1931,...RAVEN_ROCK_BATCH_V1930,...TEL_MITHRYN_BATCH_V1929,...TEL_MITHRYN_BATCH_V1928,...SOLSTHEIM_BATCH_V1927,...SOLSTHEIM_MISC_V1926,...DAW_BATCH_V1925,...FACTION_BATCH_V1924,...VERIFIED_FACTION_BATCH_V1923,...RECONCILED_QUESTS_V1921,...BASE,...EXPANDED,...ANNIVERSARY_ADDITIONS,...BASE_V12,...QUEST_BATCH_V16,...QUEST_BATCH_V17,...QUEST_GAP_BATCH_V196,...QUEST_BATCH_V197,...REPAIR_QUESTS_V1911,...REPAIR_QUESTS_V1912,...COVERAGE_QUESTS_V1916,...state.custom];
 // One logical quest per source/title. Keep all original IDs for old saves and prerequisites.
 const questKey=q=>q.source+'|'+q.name.toLocaleLowerCase().replace(/[’‘]/g,"'").trim().replace(/\s+/g,' ');
 let catalogueGroupCacheV1963=null;
 const catalogueGroups=()=>{const custom=state.custom;const old=catalogueGroupCacheV1963;if(old&&old.custom===custom&&old.count===custom.length)return old.groups;const groups=new Map();for(const q of rawCatalogue()){const key=questKey(q);if(!groups.has(key))groups.set(key,[]);groups.get(key).push(q)}catalogueGroupCacheV1963={custom,count:custom.length,groups};return groups};
 const byId=id=>rawCatalogue().find(q=>q.id===id);
 const siblings=id=>{const q=byId(id);return q?(catalogueGroups().get(questKey(q))||[q]):[]};
-const status=id=>{const ids=siblings(id).map(q=>q.id);if(ids.some(x=>state.quests[x]==='completed'))return 'completed';if(ids.some(x=>state.quests[x]==='assigned')||ids.includes(state.active))return 'assigned';if(ids.some(x=>state.quests[x]==='blocked'))return 'blocked';if(ids.some(x=>state.quests[x]==='discovered'))return 'discovered';return 'unknown'};
+const status=id=>{const ids=siblings(id).map(q=>q.id);if(ids.some(x=>state.quests[x]==='completed'))return 'completed';if(ids.some(x=>state.quests[x]==='failed'))return 'failed';if(ids.some(x=>state.quests[x]==='assigned')||ids.includes(state.active))return 'assigned';if(ids.some(x=>state.quests[x]==='blocked'))return 'blocked';if(ids.some(x=>state.quests[x]==='discovered'))return 'discovered';return 'unknown'};
 const questCategory=q=>REPEATABLE_V16.has(q.id)?'Radiant':q.category;
 const all=()=>[...catalogueGroups().values()].map(group=>{
  const active=group.find(q=>q.id===state.active);
@@ -2807,7 +3072,20 @@ function clearAliasAssignmentV1964(id){
  if(state.active&&ids.has(state.active))state.active=null;
  for(const alias of ids)if(alias!==id&&state.quests[alias]==='assigned')delete state.quests[alias];
 }
-function complete(id){const q=byId(id);if(!q)return;commit('Completed',q.name,()=>{clearAliasAssignmentV1964(id);state.quests[id]='completed';if(state.magicDirectorV1968?.questGatesV1969)for(const rule of state.magicDirectorV1968.questGatesV1969){if(siblings(id).some(x=>x.id===rule.questId))rule.unlocked=true;}if(AE_RADIANT_IDS_V1961.has(id)&&state.fishingActiveV1961===q.name)state.fishingActiveV1961=''});notice('Completed: '+q.name)}
+// v2.0.1 — failed outcomes are distinct from completed, blocked or still-open objectives.
+function failQuestV201(id){
+ const q=byId(id);if(!q)return;
+ if(isDbShackQuestV201(q)){openDbShackDecisionV201(id);return;}
+ if(!['discovered','assigned'].includes(status(id))){notice('Only a discovered or assigned quest can be marked failed.');return;}
+ if(!confirm('Confirm that '+q.name+' actually FAILED in Skyrim. It will be removed from Fate\'s eligible pool, and any assignment of this quest will end. Continue?'))return;
+ commit('Quest failed',q.name,()=>{
+  clearAliasAssignmentV1964(id);
+  for(const alias of siblings(id))if(['completed','failed','assigned','discovered'].includes(state.quests[alias.id]))delete state.quests[alias.id];
+  state.quests[id]='failed';
+ });
+ notice('Failed in Skyrim: '+q.name+'. The failure is recorded in your expedition Chronicle.');
+}
+function complete(id){const q=byId(id);if(!q)return;if(isDbShackQuestV201(q)){openDbShackDecisionV201(id);return}if(q&&branchDefinitionV210(q)&&['bloodline','jagged','thirsk'].includes(branchDefinitionV210(q).key)){openBranchDecisionV210(id);return;}commit('Completed',q.name,()=>{clearAliasAssignmentV1964(id);state.quests[id]='completed';if(state.magicDirectorV1968?.questGatesV1969)for(const rule of state.magicDirectorV1968.questGatesV1969){if(siblings(id).some(x=>x.id===rule.questId))rule.unlocked=true;}if(AE_RADIANT_IDS_V1961.has(id)&&state.fishingActiveV1961===q.name)state.fishingActiveV1961=''});notice('Completed: '+q.name)}
 const repeatableGroupV1963=id=>siblings(id).some(q=>REPEATABLE_V16.has(q.id));
 function restoreRepeatableV1963(id){
  // Backfill unlocks from older exports that predate the persistent unlock flag.
@@ -2861,9 +3139,11 @@ function editBlockReasonV1966(id){
  });
 }
 function choiceExclusionV1966(q){
- if(status(q.id)==='completed'||status(q.id)==='blocked')return '';
+ if(['completed','failed','blocked'].includes(status(q.id)))return '';
  const reasons=[];
  if(conflicts(q))reasons.push('Opposing faction or questline choice');
+ reasons.push(...crossQuestProblemsV211(q));
+ reasons.push(...branchProblemsV210(q).filter(x=>/excluded|unavailable|Only available|delivered to/.test(x)));
  if(q.source==='Base Game')reasons.push(...civilWarProblemsV1943(q).filter(x=>x.startsWith('Opposing ')));
  if(state.bittercupChoiceV1962)reasons.push(...bittercupProblemsV1962(q).filter(x=>x.includes('excludes this path')));
  reasons.push(...dbDecisionProblemsV1942(q).filter(x=>/Incompatible with|questline is unavailable/.test(x)));
@@ -2893,7 +3173,7 @@ const MEMBERSHIPS=[['companions','The Companions'],['college','College of Winter
 const MEMBERSHIP_QUESTS={companions:['c00','c01','c03','c04','c05','c06'],college:['mg01','mg02','mg03','mg04','mg05','mg06','mg07','mg08'],thieves:['tg00','tg01','tg02','tg03','tg04','tg05','tg06','tg07','tg08','tg09','tg10','expanded_base_024'],bards:[],blades:[],nightingales:[]};
 const QUEST_BRANCHES={
   imperial:['expanded_base_020'],stormcloak:['expanded_base_021'],
-  brotherJoin:['db02','db03','db04','db05','expanded_base_023'],brotherDestroy:['expanded_base_022'],
+  brotherJoin:['db03','db04','db05','expanded_base_023'],brotherDestroy:['expanded_base_022'],
   dawnguard:['expanded_daw_026','expanded_daw_027','expanded_daw_028','expanded_daw_030','expanded_daw_031','expanded_daw_032','expanded_daw_033'],
   vampire:['expanded_daw_029']
 };
@@ -3093,7 +3373,7 @@ function assignmentIntegrityV1965(){
  const known=new Set(rawCatalogue().map(x=>x.id));
  const active=typeof state.active==='string'&&state.active?state.active:null;
  const activeUnknown=active&&!known.has(active)?active:null;
- const activeConflicted=active&&!activeUnknown&&['completed','blocked'].includes(status(active))?active:null;
+ const activeConflicted=active&&!activeUnknown&&['completed','failed','blocked'].includes(status(active))?active:null;
  const activeAliases=active&&!activeUnknown?new Set(siblings(active).map(x=>x.id)):new Set(active?[active]:[]);
  const stranded=Object.entries(state.quests).filter(([id,st])=>st==='assigned'&&!activeAliases.has(id)).map(([id])=>id);
  return {activeUnknown,activeConflicted,stranded};
@@ -3114,7 +3394,7 @@ function repairAssignmentIntegrityV1965(){
 }
 function expeditionIntegrityV1963(){
  const ids=new Set(rawCatalogue().map(x=>x.id));
- const progress=Object.entries(state.quests).filter(([id,v])=>['completed','discovered','assigned','blocked'].includes(v));
+ const progress=Object.entries(state.quests).filter(([id,v])=>['completed','failed','discovered','assigned','blocked'].includes(v));
  const orphaned=progress.filter(([id])=>!ids.has(id)).map(([id,recordedStatus])=>({id,recordedStatus}));
  const assignmentIssues=assignmentIntegrityV1965();
  const activeUnknown=assignmentIssues.activeUnknown;
@@ -3175,7 +3455,7 @@ function renderHealthV1962(){
  Object.entries(ae1962Health.issues).map(([kind,items])=>'<details><summary>'+esc(kind)+' ('+items.length+')</summary>'+(items.length?items.slice(0,70).map(x=>'<small>'+esc(x.name||x.key||x.id||'')+' — '+esc(x.missingId||x.reason||x.category||(x.ids||x.names||[]).join(', ')||x.note||'review')+'</small>').join(''):'<small>None detected in this check.</small>')+'</details>').join('');
 }
 
-function isEligible(q){if(bittercupProblemsV1962(q).length)return false;if(fishingRadiantProblemsV1961(q).length)return false;if(aeDiscoveryProblemsV1959(q).length)return false;if(aeEligibilityProblemsV1958(q).length)return false;if(miscSlotProblemsV1955(q).length)return false;if(miscSlotProblemsV1954(q).length)return false;if(rareGiftProblemsV1953(q).length)return false;if(thaneProblemsV1951(q).length)return false;if(daedricProblemsV1948(q).length)return false;if(civilOutcomeProblemsV1946(q).length)return false;if(civilSharedProblemsV1945(q).length||civilTerritoryProblemsV1944(q).length||civilWarProblemsV1943(q).length)return false;if(dbDecisionProblemsV1942(q).length||ritualProblemsV1941(q).length||factionSafetyV1938(q).length)return false;if(skaalProblemsV1933(q).length||skaalThirskProblemsV1932(q).length)return false;if(accuracyReason(q)||ravenRockProblemsV1930(q).length||ravenProblemsV1931(q).length)return false;if(telMithrynProblemsV1929(q).length||telMithrynProblemsV1928(q).length||solstheimProblemsV1927(q).length||solstheimProblemsV1926(q).length||verifiedFactionProblemsV1923(q).length||factionProblemsV1924(q).length||dawProblemsV1925(q).length)return false;if(!state.installed.includes(q.source)||!state.enabledSources.includes(q.source)||!(state.enabledCategories.includes(questCategory(q))||(questCategory(q)==='Radiant'&&!state.categoryRadiantConfigured)))return false;const st=status(q.id);if(st==='completed'||st==='blocked'||st==='assigned'||conflicts(q))return false;if(missingRequirements(q).length||gateProblems(q).length||verifiedFactionProblemsV1923(q).length||factionProblemsV1924(q).length||dawProblemsV1925(q).length)return false;if(st==='unknown')return state.objectiveMode!=='discovered'&&approvedQuest(q.id);return st==='discovered'}
+function isEligible(q){if(crossQuestProblemsV211(q).length)return false;if(branchProblemsV210(q).length)return false;if(bittercupProblemsV1962(q).length)return false;if(fishingRadiantProblemsV1961(q).length)return false;if(aeDiscoveryProblemsV1959(q).length)return false;if(aeEligibilityProblemsV1958(q).length)return false;if(miscSlotProblemsV1955(q).length)return false;if(miscSlotProblemsV1954(q).length)return false;if(rareGiftProblemsV1953(q).length)return false;if(thaneProblemsV1951(q).length)return false;if(daedricProblemsV1948(q).length)return false;if(civilOutcomeProblemsV1946(q).length)return false;if(civilSharedProblemsV1945(q).length||civilTerritoryProblemsV1944(q).length||civilWarProblemsV1943(q).length)return false;if(dbDecisionProblemsV1942(q).length||ritualProblemsV1941(q).length||factionSafetyV1938(q).length)return false;if(skaalProblemsV1933(q).length||skaalThirskProblemsV1932(q).length)return false;if(accuracyReason(q)||ravenRockProblemsV1930(q).length||ravenProblemsV1931(q).length)return false;if(telMithrynProblemsV1929(q).length||telMithrynProblemsV1928(q).length||solstheimProblemsV1927(q).length||solstheimProblemsV1926(q).length||verifiedFactionProblemsV1923(q).length||factionProblemsV1924(q).length||dawProblemsV1925(q).length)return false;if(!state.installed.includes(q.source)||!state.enabledSources.includes(q.source)||!(state.enabledCategories.includes(questCategory(q))||(questCategory(q)==='Radiant'&&!state.categoryRadiantConfigured)))return false;const st=status(q.id);if(st==='completed'||st==='failed'||st==='blocked'||st==='assigned'||conflicts(q))return false;if(missingRequirements(q).length||gateProblems(q).length||verifiedFactionProblemsV1923(q).length||factionProblemsV1924(q).length||dawProblemsV1925(q).length)return false;if(st==='unknown')return state.objectiveMode!=='discovered'&&approvedQuest(q.id);return st==='discovered'}
 function poolGroups(){const options=all().filter(isEligible);return {discovered:options.filter(q=>status(q.id)==='discovered'),approved:options.filter(q=>status(q.id)==='unknown')}}
 function directorPreview(){const el=$('directorPoolPreview');if(!el)return;const pools=poolGroups();el.innerHTML=`<b>Eligible now:</b> ${pools.discovered.length} discovered · ${pools.approved.length} approved undiscovered<p class="muted">Only quests passing recorded prerequisites and faction exclusions are counted. Unknown prerequisites still require your own verification.</p>`}
 function runPreflight(){
@@ -3284,8 +3564,11 @@ function changeTab(next){
 function questAvailabilityLegacyV1976(q){if(accuracyReason(q))return ['Catalogue hold','locked',accuracyReason(q)];
  const st=status(q.id),missing=missingRequirements(q),approved=approvedQuest(q.id);
  if(st==='completed')return ['Completed','ready','Recorded as finished'];
+  if(st==='failed')return ['Failed','locked','Recorded as failed in Skyrim; Fate will not assign this quest'];
  if(st==='blocked')return ['Suspended','locked','Manually blocked'+(blockReasonV1966(q)?': '+blockReasonV1966(q):' until you unblock it')];
  if(st==='assigned')return ['Assigned','ready','Current binding objective'];
+ if(crossQuestProblemsV211(q).length)return ['Cross-quest restriction','locked',crossQuestProblemsV211(q).join('; ')];
+ if(branchProblemsV210(q).length)return ['Story decision','locked',branchProblemsV210(q).join('; ')];
  if(bittercupProblemsV1962(q).length)return ['Bittercup path excluded','locked',bittercupProblemsV1962(q).join('; ')];
  if(fishingRadiantProblemsV1961(q).length)return ['Fishing job not confirmed','locked',fishingRadiantProblemsV1961(q).join('; ')];
  if(miscSlotProblemsV1955(q).length)return ['Shared slot occupied','locked',miscSlotProblemsV1955(q).join('; ')];
@@ -3316,7 +3599,7 @@ function questAvailabilityLegacyV1976(q){if(accuracyReason(q))return ['Catalogue
 function questAvailability(q){
  const old=questAvailabilityLegacyV1976(q);
  const st=status(q.id);
- if(st==='completed'||st==='assigned'||st==='blocked')return old;
+ if(st==='completed'||st==='failed'||st==='assigned'||st==='blocked')return old;
  const canDraw=isEligible(q);
  if(canDraw)return ['Eligible','ready',st==='unknown'?'Approved undiscovered quest; verify it in Skyrim before drawing':'Discovered and passes recorded Director restrictions'];
  if(old[0]==='Eligible'){
@@ -3364,14 +3647,18 @@ function questStartEvidence(q){
 }
 let journalExpandedIdV1967='';
 let journalSpotlightV1967='';
-function journalGroupV1967(q){const st=status(q.id);if(st==='completed')return 'completed';if(st==='discovered'||st==='assigned')return 'discovered';if(st==='unknown')return 'all';return 'blocked';}
+function journalGroupV1967(q){const st=status(q.id);if(st==='completed'||st==='failed')return 'completed';if(st==='discovered'||st==='assigned')return 'discovered';if(st==='unknown')return 'all';return 'blocked';}
 function journalDirectorFilterV1967(q){return state.enabledSources.includes(q.source)&&(state.enabledCategories.includes(questCategory(q))||(questCategory(q)==='Radiant'&&!state.categoryRadiantConfigured));}
 function questRow(q){
  const st=status(q.id),approved=approvedQuest(q.id),[label,tone,explanation]=questAvailability(q);
  const expanded=journalExpandedIdV1967===q.id;
- const stateLabel=st==='assigned'?'Assigned':st==='completed'?'Completed':st==='discovered'?'Discovered':st==='blocked'?'Blocked':label;
- const stateClass=st==='completed'?'done':st==='assigned'?'assigned':'';
- const quick=st==='unknown'?'<button type="button" class="primary journal-quick" data-action="discover" data-id="'+esc(q.id)+'">Discover</button>':(st==='discovered'||st==='assigned')?'<button type="button" class="journal-quick" data-action="complete" data-id="'+esc(q.id)+'">Complete</button>':'';
+ const stateLabel=st==='assigned'?'Assigned':st==='failed'?'Failed':st==='completed'?'Completed':st==='discovered'?'Discovered':st==='blocked'?'Blocked':label;
+ const stateClass=st==='completed'?'done':st==='failed'?'failed':st==='assigned'?'assigned':'';
+ const quick=st==='unknown'?'<button type="button" class="primary journal-quick" data-action="discover" data-id="'+esc(q.id)+'">Discover</button>':(st==='discovered'||st==='assigned')?'<button type="button" class="journal-quick" data-action="'+(isDbShackQuestV201(q)||branchDefinitionV210(q)&&['bloodline','jagged','thirsk'].includes(branchDefinitionV210(q).key)?'branchOpenV210':'complete')+'" data-id="'+esc(q.id)+'">'+(isDbShackQuestV201(q)||branchDefinitionV210(q)&&['bloodline','jagged','thirsk'].includes(branchDefinitionV210(q).key)?'Resolve':'Complete')+'</button>':'';
+ const shackActions=isDbShackQuestV201(q)?(st==='discovered'||st==='assigned'
+  ?'<div class="release-card1984"><h3>Abandoned Shack — your decision</h3><p>Record only what actually happened in Skyrim. Fate selects eligible quests; you choose how this one ends. Killing Astrid fails this quest and discovers Destroy the Dark Brotherhood! for a later Fate draw.</p><div class="row"><button type="button" class="small" data-action="dbJoin" data-id="'+esc(q.id)+'">Spared Astrid — join</button><button type="button" class="small danger" data-action="dbDestroy" data-id="'+esc(q.id)+'">Killed Astrid — destroy</button></div></div>'
+  :'<p class="muted"><b>Recorded outcome:</b> '+esc(st==='failed'?'Astrid killed — failed':st==='completed'?'Astrid spared — completed':'Not yet recorded')+'</p>')
+  :'';
  return '<div class="journal-card'+(expanded?' is-open':'')+'" data-quest-id="'+esc(q.id)+'">'
  +'<div class="journal-card-top"><button type="button" class="journal-card-toggle" data-action="expand" data-id="'+esc(q.id)+'" aria-expanded="'+expanded+'" aria-label="'+(expanded?'Hide':'Show')+' details for '+esc(q.name)+'">'
  +'<span style="flex:1;min-width:0"><span class="journal-card-title">'+esc(q.name)+'</span><span class="journal-card-meta">'+esc(q.source)+' · '+esc(questCategory(q))+(questCategory(q)==='Faction'?' · '+esc(JOURNAL_FACTIONS_V1979.find(x=>x[0]===journalFactionV1979(q))?.[1]||'Other / Unclassified'):'')+(q.location?' · '+esc(q.location):'')+'</span></span><span aria-hidden="true" class="journal-card-chevron">'+(expanded?'▴':'▾')+'</span></button>'
@@ -3381,12 +3668,18 @@ function questRow(q){
  +'<p><b>Quest giver / trigger:</b> '+esc(questStart(q)||'Not yet recorded')+'</p>'
  +'<p><b>Where to start:</b> '+esc(questDirections(q)||'Not yet recorded')+'</p>'
  +(q.requires?.length?'<p><b>Known prerequisites:</b> '+q.requires.map(x=>esc(byId(x)?.name||x)).join(', ')+'</p>':'')
- +'<p class="muted"><b>Start confidence:</b> '+esc(questStartEvidence(q)[0])+' — '+esc(questStartEvidence(q)[1])+'</p>'
+ +shackActions
+ +branchPanelV210(q,st)
+ +crossPanelV211(q)
+  +(state.questOutcomesV210?.[questKey(q)]?'<p class="branch-outcome-v210"><b>Saved outcome note:</b> '+esc(state.questOutcomesV210[questKey(q)])+'</p>':'')
+  +'<p class="muted"><b>Start confidence:</b> '+esc(questStartEvidence(q)[0])+' — '+esc(questStartEvidence(q)[1])+'</p>'
  +'<p class="muted">'+(REVIEWED_QUESTS[q.id]||REVIEWED_STARTS_V14[q.name]||START_GUIDES_V194[q.name]||START_GUIDES_V195[q.name]?'Starting guidance recorded; confirm prerequisites in Skyrim.':'Starting conditions not fully reviewed; confirm in Skyrim.')+'</p>'
  +'<div class="row"><button class="small" data-action="giver" data-id="'+esc(q.id)+'">Edit contact</button><button class="small" data-action="directions" data-id="'+esc(q.id)+'">Edit directions</button>'
  +(st==='unknown'?'<button class="small" data-action="approve" data-id="'+esc(q.id)+'">'+(approved?'Revoke approval':'Verify & approve')+'</button>':'')
- +(st==='blocked'?'<button class="small" data-action="goBlocked" data-id="'+esc(q.id)+'">Open Blocked</button>':'')
+ +(st!=='unknown'?'<button class="small" data-action="outcomeV210" data-id="'+esc(q.id)+'">Record outcome note</button>':'')
+  +(st==='blocked'?'<button class="small" data-action="goBlocked" data-id="'+esc(q.id)+'">Open Blocked</button>':'')
  +((st==='discovered'||st==='assigned')?'<button class="small" data-action="block" data-id="'+esc(q.id)+'">Block</button>':'')
+ +((st==='discovered'||st==='assigned')&&!isDbShackQuestV201(q)?'<button class="small" data-action="fail" data-id="'+esc(q.id)+'">Mark failed</button>':'')
  +(st==='completed'&&repeatableGroupV1963(q.id)?'<button class="small" data-action="resetrepeat" data-id="'+esc(q.id)+'">Available again</button>':'')
  +'</div></div></div>';
 }
@@ -4329,7 +4622,7 @@ function renderLibrary(){
  $('journalAllCount1967').textContent='('+availableAll.length+')';
  $('journalDiscoveredCount1967').textContent='('+countDiscovered+')';
  $('journalCompletedCount1967').textContent='('+countCompleted+')';
- const hints={all:'Browse quests not yet discovered. Discover a quest when you encounter it in Skyrim.',discovered:'Quests you have discovered or Fate has assigned. Complete them when finished.',completed:'Finished quests are kept here. Repeatable jobs can be made available again when re-offered in Skyrim.'};
+ const hints={all:'Browse quests not yet discovered. Discover a quest when you encounter it in Skyrim.',discovered:'Quests you have discovered or Fate has assigned. Complete them when finished.',completed:'Resolved quests appear here, labelled Completed or Failed. A failed quest cannot be drawn again. Repeatable jobs may be restored if re-offered in Skyrim.'};
  $('journalViewHint1967').textContent=hints[view];
  document.querySelectorAll('[data-journal-view]').forEach(b=>{const active=b.dataset.journalView===view;b.setAttribute('aria-selected',String(active));b.tabIndex=active?0:-1});
  const spotlight=filtered.find(q=>q.id===journalSpotlightV1967&&journalGroupV1967(q)==='blocked');
@@ -4483,7 +4776,7 @@ $('journalFilter').onchange=()=>{limit=40;journalExpandedIdV1967='';journalSpotl
 document.querySelectorAll('[data-journal-view]').forEach(b=>b.onclick=()=>{if($('journalFilter').value===b.dataset.journalView)return;$('journalFilter').value=b.dataset.journalView;limit=40;journalExpandedIdV1967='';journalSpotlightV1967='';renderLibrary()});
 $('journalSource1967').onchange=$('journalCategory1967').onchange=$('journalUseDirector1967').onchange=$('journalFaction1979').onchange=$('journalSort1979').onchange=()=>{limit=40;journalExpandedIdV1967='';renderLibrary()};
 $('moreQuests').onclick=()=>{limit+=40;renderLibrary()};
-$('questList').onclick=e=>{const b=e.target.closest('[data-action]');if(!b)return;const id=b.dataset.id;if(b.dataset.action==='expand'){journalExpandedIdV1967=journalExpandedIdV1967===id?'':id;renderLibrary();return}if(b.dataset.action==='goBlocked'){changeTab('blocked');return}if(b.dataset.action==='giver'){const q=byId(id);if(!q)return;const value=prompt('Who gives this quest, or how does it start? (Leave blank to clear your custom entry)',questStart(q));if(value!==null)commit('Quest start updated',q.name,()=>{state.questGivers??={};state.questGivers[id]=value.trim()});return}if(b.dataset.action==='directions'){const q=byId(id);if(!q)return;const value=prompt('Where should the player go to begin this quest? Keep it short and spoiler-light. (Leave blank to clear your custom entry)',questDirections(q));if(value!==null)commit('Quest directions updated',q.name,()=>{state.questDirections??={};state.questDirections[id]=value.trim()});return}if(b.dataset.action==='approve'){if(!approvedQuest(id)&&!confirm('Only approve this quest if you have checked that it can be started in your current Skyrim save. The database does not verify all requirements. Continue?'))return;commit('Undiscovered quest approval changed',byId(id)?.name||id,()=>{state.approvedUnknown=approvedQuest(id)?state.approvedUnknown.filter(x=>!siblings(id).some(q=>q.id===x)):[...state.approvedUnknown,id]});return}if(b.dataset.action==='resetrepeat')resetRepeatable(id);if(b.dataset.action==='discover')recordDiscover(id);if(b.dataset.action==='complete')complete(id);if(b.dataset.action==='block')blockQuest(id);if(b.dataset.action==='unblock')unblockQuestV1966(id)};
+$('questList').onclick=e=>{const b=e.target.closest('[data-action]');if(!b)return;const id=b.dataset.id;if(b.dataset.action==='expand'){journalExpandedIdV1967=journalExpandedIdV1967===id?'':id;renderLibrary();return}if(b.dataset.action==='goBlocked'){changeTab('blocked');return}if(b.dataset.action==='dbOpen'||b.dataset.action==='branchOpenV210'){journalExpandedIdV1967=id;renderLibrary();return}if(b.dataset.action==='dbJoin'||b.dataset.action==='dbDestroy'){resolveDbShackV201(id,b.dataset.action==='dbJoin'?'join':'destroy');return}if(b.dataset.action==='branchV210'){resolveBranchV210(id,b.dataset.choice);return}if(b.dataset.action==='crossV211'){recordCrossChoiceV211(id,b.dataset.choice);return}if(b.dataset.action==='crossConfirmV211'){confirmCrossQuestV211(id);return}if(b.dataset.action==='outcomeV210'){setOutcomeNoteV210(id);return}if(b.dataset.action==='fail'){failQuestV201(id);return}if(b.dataset.action==='giver'){const q=byId(id);if(!q)return;const value=prompt('Who gives this quest, or how does it start? (Leave blank to clear your custom entry)',questStart(q));if(value!==null)commit('Quest start updated',q.name,()=>{state.questGivers??={};state.questGivers[id]=value.trim()});return}if(b.dataset.action==='directions'){const q=byId(id);if(!q)return;const value=prompt('Where should the player go to begin this quest? Keep it short and spoiler-light. (Leave blank to clear your custom entry)',questDirections(q));if(value!==null)commit('Quest directions updated',q.name,()=>{state.questDirections??={};state.questDirections[id]=value.trim()});return}if(b.dataset.action==='approve'){if(!approvedQuest(id)&&!confirm('Only approve this quest if you have checked that it can be started in your current Skyrim save. The database does not verify all requirements. Continue?'))return;commit('Undiscovered quest approval changed',byId(id)?.name||id,()=>{state.approvedUnknown=approvedQuest(id)?state.approvedUnknown.filter(x=>!siblings(id).some(q=>q.id===x)):[...state.approvedUnknown,id]});return}if(b.dataset.action==='resetrepeat')resetRepeatable(id);if(b.dataset.action==='discover')recordDiscover(id);if(b.dataset.action==='complete')complete(id);if(b.dataset.action==='block')blockQuest(id);if(b.dataset.action==='unblock')unblockQuestV1966(id)};
 $('addCustom').onclick=()=>{const name=$('customName').value.trim();if(!name){notice('Enter a quest name.');return}const existing=all().find(q=>q.name.toLowerCase()===name.toLowerCase());if(existing){notice('That quest already exists in the library. Search and discover it instead.');return}let id;commit('Custom quest discovered',name,()=>{id='custom-'+Date.now()+'-'+state.custom.length;state.custom.push({...Q(id,name,$('customSource').value,$('customCategory').value,$('customLocation').value.trim()),giver:$('customGiver').value.trim(),directions:$('customDirections').value.trim()});state.quests[id]='discovered'});$('customName').value='';$('customLocation').value='';$('customGiver').value='';$('customDirections').value='';notice('Custom quest added: '+name)};
 $('objectiveMode').onchange=()=>{$('mixedOptions').classList.toggle('hide',$('objectiveMode').value!=='mixed')};$('discoveredWeight').oninput=()=>{$('weightValue').textContent=$('discoveredWeight').value+'%'};
 $('quickComplete').onclick=()=>{if(state.active)complete(state.active);else notice('No active assignment to complete.')};$('quickLibrary').onclick=()=>changeTab('journal');
@@ -4491,7 +4784,7 @@ document.querySelectorAll('[data-category-preset]').forEach(btn=>btn.onclick=()=
 $('categoryChoices').addEventListener('change',()=>{$('categoryHint').textContent='Selected: '+document.querySelectorAll('[data-category]:checked').length+' of '+CATEGORIES.length+' categories · Press Save Director settings to apply.'});
 $('saveDirector').onclick=()=>{const sources=[...document.querySelectorAll('[data-source]:checked')].map(x=>x.dataset.source),categories=[...document.querySelectorAll('[data-category]:checked')].map(x=>x.dataset.category);commit('Director settings updated',`${sources.length} content sources; ${categories.length} categories`,()=>{state.enabledSources=sources;state.enabledCategories=categories;state.categoryRadiantConfigured=true;state.balanced=$('repeatCategories').checked;state.objectiveMode=$('objectiveMode').value;state.discoveredWeight=+$('discoveredWeight').value;state.allowUndiscovered=state.objectiveMode!=='discovered'});notice('Director settings saved')};
 $('saveMemberships').onclick=()=>{const memberships=Object.fromEntries([...document.querySelectorAll('[data-membership]')].map(el=>[el.dataset.membership,el.value]));commit('Faction memberships updated',MEMBERSHIPS.map(([id,name])=>name+': '+memberships[id]).join('; '),()=>{state.memberships=memberships});notice('Faction memberships saved')};
-$('saveBranches').onclick=()=>{const branches={civil:$('civilSide').value,daw:$('dawSide').value,brother:$('brotherSide').value};commit('Questline choices updated',Object.values(branches).join(', '),()=>{state.branches=branches});notice('Questline choices saved; incompatible quests excluded')};
+$('saveBranches').onclick=()=>{const branches={civil:$('civilSide').value,daw:$('dawSide').value,brother:$('brotherSide').value};if(['join','destroy'].includes(state.dbAstridDecision)&&branches.brother!==state.dbAstridDecision){notice('Your Abandoned Shack outcome has already been recorded. Keep the Brotherhood branch consistent with that outcome; use Undo or restore a backup to correct a mistaken decision.');return}commit('Questline choices updated',Object.values(branches).join(', '),()=>{state.branches=branches});notice('Questline choices saved; incompatible quests excluded')};
 $('edition').onchange=()=>{const v=$('edition').value;const defaults=v==='original'?['Base Game','Custom']:v==='legendary'?['Base Game','Dawnguard','Hearthfire','Dragonborn','Custom']:v==='special'?['Base Game','Dawnguard','Hearthfire','Dragonborn','Custom']:SOURCES;document.querySelectorAll('[data-installed]').forEach(x=>x.checked=defaults.includes(x.dataset.installed))};
 $('saveEdition').onclick=()=>{const edition=$('edition').value,installed=['Base Game',...[...document.querySelectorAll('[data-installed]:checked')].map(x=>x.dataset.installed).filter(x=>x!=='Base Game')];commit('Edition updated',edition,()=>{state.edition=edition;state.installed=installed;state.enabledSources=state.enabledSources.filter(x=>installed.includes(x))});notice('Edition and content saved')};
 $('exportJson').onclick=()=>download('skyrim-fate-director-backup.json',JSON.stringify(state,null,2),'application/json');$('exportText').onclick=()=>download('skyrim-fate-director-chronicle.txt',[`Skyrim Fate Director — ${state.character.name||'Unnamed'} (${state.character.race})`,`${state.edition} · Level ${state.character.level}`,'',...state.history.map(x=>`${new Date(x.at).toLocaleString()} | ${x.kind} | ${x.detail}`)].join('\n'),'text/plain');
