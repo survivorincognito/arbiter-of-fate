@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#151b22"><title>Skyrim — The Fate Director · The Arbiter of Fate · v2.4.5</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#151b22"><title>Skyrim — The Fate Director · The Arbiter of Fate · v2.5.0</title><style>
 :root{color-scheme:dark;--bg:#11171e;--panel:#1b2530;--panel2:#24313d;--line:#3a4b56;--text:#e8e5d9;--muted:#a8b2b8;--gold:#dfbb78;--good:#8bc8aa}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#26313a 0,#11171e 55%);font:15px/1.5 system-ui,Segoe UI,sans-serif;color:var(--text)}header,main,footer{max-width:1050px;margin:auto;padding:18px}header{padding-top:30px}h1{font-family:Georgia,serif;letter-spacing:.03em;margin:0;color:var(--gold);font-size:clamp(27px,5vw,40px)}h2{font-family:Georgia,serif;color:var(--gold);font-size:21px;margin:0 0 12px}h3{margin:0 0 8px;font-size:16px}p{margin:8px 0}small,.muted{color:var(--muted)}.eyebrow{font-size:11px;letter-spacing:.17em;color:var(--gold);text-transform:uppercase}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0;box-shadow:0 6px 18px #0002}.sub{background:var(--panel2);padding:13px;border-radius:10px;margin:10px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px}.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}.row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.between{justify-content:space-between}.tabs{display:flex;gap:6px;overflow-x:auto;padding:5px 0 10px}.tabs button{white-space:nowrap}.tabs button.active{background:var(--gold);color:#19212a}button,input,select,textarea{font:inherit;border-radius:8px}button{border:1px solid #63717b;background:#334351;color:#fff;padding:10px 13px;cursor:pointer}button:hover{filter:brightness(1.13)}button:disabled{opacity:.45;cursor:not-allowed}button.primary{background:var(--gold);border-color:var(--gold);color:#1a2026;font-weight:700}button.danger{border-color:#9d6969}input,select,textarea{background:#111b23;border:1px solid #65717a;color:#fff;padding:10px;width:100%;min-width:0}label{display:block;font-size:13px;color:var(--muted);margin:8px 0 4px}.check{display:flex;align-items:center;gap:9px;color:var(--text);margin:9px 0}.check input{width:auto}.pill{font-size:11px;border:1px solid #60707b;border-radius:99px;padding:2px 8px;color:var(--muted)}.stat{background:var(--panel2);border-radius:10px;text-align:center;padding:10px}.stat strong{display:block;color:var(--gold);font-size:23px}.quest{border-bottom:1px solid var(--line);padding:10px 0}.quest:last-child{border:0}.quest b{display:block}.quest small{display:block}.quest .row{margin-top:7px}.hide{display:none!important}.message{padding:10px 12px;border-left:3px solid var(--gold);background:#3a352c;margin:10px 0}.ok{border-color:var(--good)}.log{max-height:300px;overflow:auto}.log div{border-bottom:1px solid var(--line);padding:7px 0;font-size:13px}.badge{color:var(--gold)}footer{font-size:12px;color:var(--muted);padding-bottom:30px}.full{width:100%}button.small{font-size:12px;padding:5px 8px}code{color:var(--gold)}@media(max-width:520px){header,main,footer{padding:12px}.panel{padding:13px}.tabs button{padding:8px 10px}}
 .skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:8px;margin:12px 0}.skill-grid label{font-size:13px;margin:0}.skill-grid input{width:100%;margin:4px 0 0}.perk-row{padding:9px 0;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:flex-start}.perk-row small{display:block;color:var(--muted);font-size:12px}.perk-row input{margin-top:4px}.perk-scroll{max-height:320px;overflow:auto;border:1px solid var(--line);border-radius:10px;padding:4px 12px}.perk-available{color:var(--good)}.perk-locked{opacity:.75}
 .pill.ready{color:#9de0b8;border-color:#54896d}.pill.pending{color:#e7c783;border-color:#9a7d48}.pill.locked{color:#e7a7a7;border-color:#986565}.quest-status{margin:5px 0;font-size:12px;color:var(--muted)}
@@ -214,6 +214,20 @@
 .chronicle-find-v230 label{margin:0 0 5px}
 .chronicle-assigned-v230{flex:0 0 auto;min-height:44px;align-items:center;padding:9px 0}
 @media(max-width:460px){.journal-reset-v230{font-size:12px;padding:9px 11px}.journal-quick-label-v230{flex:0 0 100%}.journal-quick-v230 button{flex:1 1 120px}.chronicle-find-v230>div{flex-basis:100%}}
+/* v2.5.0 — quiet, reviewable quest relationship suggestions */
+.relationship-review-v250{border:1px solid var(--line);background:#1b2934;border-radius:11px;padding:11px 13px;margin:12px 0}
+.relationship-review-v250 summary{font-size:14px;color:var(--gold)}
+.relationship-review-v250 .relationship-count-v250{font-size:11px;color:var(--muted);margin-left:5px}
+.relationship-entry-v250{background:#17232d;border:1px solid var(--line);border-radius:9px;padding:12px;margin-top:10px}
+.relationship-entry-v250 strong{display:block;font-size:14px}
+.relationship-entry-v250 p{font-size:12px;color:var(--muted);margin:5px 0}
+.relationship-entry-v250 label{font-size:12px;margin:9px 0}
+.relationship-entry-v250 select{margin:4px 0 0}
+.relationship-entry-v250 .row{margin-top:10px}
+.relationship-entry-v250 button{font-size:12px;padding:8px 10px}
+.relationship-entry-v250 .relationship-evidence-v250{font-size:12px;color:var(--text);margin-top:8px}
+.relationship-inline-v250{display:inline-block;font-size:12px;color:var(--gold);padding:5px 0}
+@media(max-width:520px){.relationship-entry-v250 .row button{flex:1 1 120px}}
 /* v2.4.4 — explicit freedom to explore, with a shared exception flow for Strict Assignment Mode. */
 .exploration-rule-v244{padding:11px 0;margin:9px 0 13px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .exploration-rule-v244 strong{display:block;margin-bottom:5px;color:var(--text)}
@@ -371,6 +385,7 @@
 <button type="button" data-journal-view="completed" role="tab" aria-selected="false">Completed <span class="journal-num" id="journalCompletedCount1967"></span></button>
 <button type="button" data-journal-view="misc" role="tab" aria-selected="false">Misc. <span class="journal-num" id="journalMiscCountV240"></span></button>
 </div>
+<details class="relationship-review-v250" id="relationshipReviewV250"><summary><b>Quest Relationships</b><span class="relationship-count-v250" id="relationshipCountV250">· 0 to review</span></summary><p class="muted" style="font-size:12px">Possible links between objectives you've recorded and named quests. Nothing here changes Fate until you confirm a connection. Review whenever convenient.</p><div id="relationshipReviewListV250" aria-live="polite"></div></details>
 <input type="hidden" id="journalFilter" value="all">
 <div id="journalRegularV240">
 <p class="journal-hint" id="journalViewHint1967">Browse quests not yet discovered. Use Discover when you encounter one in Skyrim.</p>
@@ -476,17 +491,18 @@
 <p class="muted" style="font-size:12px">Import replaces the expedition in this browser after you confirm. The Director can import compatible earlier version-1 expedition backups; unsupported or malformed files are rejected. Export your current progress first.</p>
 <div class="row" style="margin-top:12px"><button id="newExpedition" class="danger">Start new expedition</button></div>
 <p class="muted" style="font-size:12px">Starting a new expedition replaces local progress and requires two confirmations. Undo is session-based and is not a substitute for a saved backup.</p></article>
-<article class="panel" id="aboutBuild1984"><div class="row between"><h2>About The Fate Director</h2><span class="release-chip1984">PUBLIC RELEASE · v2.4.5</span></div>
+<article class="panel" id="aboutBuild1984"><div class="row between"><h2>About The Fate Director</h2><span class="release-chip1984">PUBLIC RELEASE · v2.5.0</span></div>
 <p><b>Skyrim — The Fate Director</b> is Survivor Incognito’s standalone expedition companion. <b>The Arbiter of Fate</b> is the name of the guiding presence behind Fate’s optional decisions, with its quest-decision controls under the <b>Arbiter</b> tab. You explore Skyrim; the Director helps you record progress and lets The Arbiter choose from eligible objectives and other decisions under rules you select.</p><p class="muted" style="font-size:12px">Unofficial fan-made companion; not affiliated with or endorsed by Bethesda. No game files, mods or installation are required.</p>
 <div class="release-card1984"><h3>What Fate can control</h3><p>Depending on your selections: eligible quest assignments, level-up attributes, available perk choices, and optional magic permissions. You can also track factions, discovered and completed quests, perks, learned spells, Dragon Shouts and expedition history.</p></div>
 <div class="release-card1984"><h3>What stays with the player</h3><p>You choose when to accept decisions, how much authority Fate has, what you discover naturally and how faithfully to apply its suggestions. Starting playstyle equipment guidance is not an automatic restriction. The Director <b>cannot read, edit or control</b> your Skyrim save or game world.</p></div>
 <div class="release-card1984"><h3>Supported game content and limits</h3><p>Edition choices cover Original, Legendary, Special and Anniversary Edition, with selectable DLC and Creation content. The catalogue is curated rather than an exhaustive authoritative database. Some quest start conditions, acquisitions and modded variants still need in-game confirmation; the Director deliberately requires manual approval for uncertain undiscovered quests.</p></div>
 <details class="sub release-doc1984" id="releaseNotes1984"><summary><strong>Version information &amp; recent changes</strong></summary>
-<p class="muted">Current version: <b>v2.4.5</b>. Catalogue reports and correction tools are below; earlier changes remain in the version history.</p><h3>Catalogue research &amp; corrections</h3><p class="muted">Reference information and technical reports live here rather than taking space in the Quest Journal. Reconciliation actions still update your expedition only when you confirm them, are saved in the Chronicle, and can be undone.</p><details class="sub catalogue-coverage-v220" id="catalogueCoveragePanelV220"><summary><strong>Catalogue coverage</strong> · v2.2 research and outstanding gaps</summary><div id="catalogueCoverageContentV220"></div></details><details class="sub catalogue-reconcile-v221" id="catalogueReconciliationPanelV221"><summary><strong>Catalogue reconciliation</strong> · duplicates, family conflicts &amp; finite quests</summary><div id="catalogueReconciliationContentV221"></div></details><details class="sub release-doc1984" id="availabilityResearchV222"><summary><strong>Quest availability &amp; progression accuracy</strong> · stage-dependent work and confirmed offers</summary><div id="availabilityResearchContentV222"></div></details><h3>Version history</h3>
+<p class="muted">Current version: <b>v2.5.0</b>. Catalogue reports and correction tools are below; earlier changes remain in the version history.</p><h3>Catalogue research &amp; corrections</h3><p class="muted">Reference information and technical reports live here rather than taking space in the Quest Journal. Reconciliation actions still update your expedition only when you confirm them, are saved in the Chronicle, and can be undone.</p><details class="sub catalogue-coverage-v220" id="catalogueCoveragePanelV220"><summary><strong>Catalogue coverage</strong> · v2.2 research and outstanding gaps</summary><div id="catalogueCoverageContentV220"></div></details><details class="sub catalogue-reconcile-v221" id="catalogueReconciliationPanelV221"><summary><strong>Catalogue reconciliation</strong> · duplicates, family conflicts &amp; finite quests</summary><div id="catalogueReconciliationContentV221"></div></details><details class="sub release-doc1984" id="availabilityResearchV222"><summary><strong>Quest availability &amp; progression accuracy</strong> · stage-dependent work and confirmed offers</summary><div id="availabilityResearchContentV222"></div></details><h3>Version history</h3>
 <h3>Advanced catalogue diagnostics</h3><p class="muted">The legacy catalogue health report is kept for research and exports, outside the everyday Quest Journal.</p>
 <details class="sub" id="catalogueAudit"><summary><strong>Catalogue Health Report</strong> <span class="muted">· optional diagnostics</span></summary><h3>Catalogue Health Report</h3><p class="muted">Live audit of recorded catalogue metadata. Duplicate titles are consolidated without deleting saved quest IDs. Counts describe coverage, not independently verified accuracy.</p><div class="quest" id="manifestReviewV1917"></div>
 <details class="sub" id="accuracyReview1977"><summary><strong>v1.9.77 · Spell ranks &amp; quest trigger accuracy</strong></summary><div id="catalogueAccuracy1977"></div></details><details class="sub" id="finalQuestAudit1980"><summary><strong>v1.9.80 · Final quest eligibility consistency</strong> · read-only</summary><div id="finalQuestAuditContent1980"></div><button type="button" class="small" id="exportFinalQuestAudit1980">Export eligibility audit (JSON)</button></details><div id="auditStats"></div><div class="row" style="margin:12px 0"><button id="exportAudit" class="small">Export audit report (JSON)</button></div><div id="auditPriorities"></div><details class="sub"><summary>Quest-type reconciliation and reference cross-check</summary><div id="reconciliationV1918"></div><div class="row"><button id="exportReconciliationV1918" class="small">Export reconciliation (JSON)</button></div></details><details class="sub"><summary>Expanded quest research inventory — v1.9.62</summary><details class="sub"><summary>Save integrity &amp; expedition rehearsal (v1.9.63)</summary><div id="integrity1963"></div></details><details class="sub"><summary>Anniversary Edition — Bittercup branches &amp; catalogue health (v1.9.62)</summary><div id="ae1962"></div></details><details class="sub"><summary>Anniversary Edition — Fishing radiant &amp; catalogue identity (v1.9.61)</summary><div id="ae1961"></div></details><details class="sub"><summary>Anniversary Edition — Fishing &amp; Forgotten Seasons (v1.9.60)</summary><div id="ae1960"></div></details><details class="sub"><summary>Anniversary Edition — quest identity reconciliation (v1.9.59)</summary><div id="ae1959"></div></details><details class="sub"><summary>Anniversary Edition — prerequisites &amp; eligibility (v1.9.58)</summary><div id="ae1958"></div></details><details class="sub"><summary>Anniversary Edition — individual quest verification (v1.9.57)</summary><div id="ae1957"></div></details><details class="sub"><summary>Anniversary Edition — all 74 Creation packs (v1.9.56)</summary><div id="ae1956"></div></details><div id="researchV1920"></div><button id="exportResearchV1920" class="small">Export expanded research inventory (JSON)</button><button id="exportFindingsV1921" class="small">Export researched gaps (JSON)</button><div id="triageV1922"></div><div id="verified1923"></div><div id="faction1924"></div><div id="daw1925"></div><div id="solstheim1926"></div><div id="solstheim1927"></div><div id="telmithryn1928"></div><div id="telmithryn1929"></div><div id="ravenrock1930"></div><div id="raven1931"></div><div id="skaal1932"></div><div id="skaal1933"></div><div id="dragonborn1934"></div><div id="dragonborn1935"></div><div id="base1936"></div><div id="faction1938"></div><div id="factionTracker1939"></div><div id="college1940"></div><div id="ritual1941"></div><div id="brotherhood1942"></div><div id="civilWar1943"></div><div id="civilTerritory1944"></div><div id="civilShared1945"></div><div id="civilOutcome1946"></div><div id="baseSide1947"></div><div id="daedric1948"></div><div id="daedric1949"></div><div id="thane1950"></div><div id="thane1951"></div><div id="misc1952"></div><div id="misc1953"></div><div id="misc1954"></div><div id="misc1955"></div><button type="button" onclick="exportRitualV1941()">Export ritual eligibility (JSON)</button><button type="button" onclick="exportCollegeResearchV1940()">Export College and Nazir research (JSON)</button><button type="button" onclick="exportFactionAuditV1938()">Export faction reconciliation (JSON)</button><button type="button" onclick="exportBaseAuditV1936()">Export base-game comparison (JSON)</button><button id="exportDragonbornFindingsV1935" class="small">Export Dragonborn decisions (JSON)</button><button id="exportTriageV1922" class="small">Export classified gaps (JSON)</button></details><details class="sub"><summary>Quarantined records — separate identity review</summary><div id="quarantineV1918"></div></details><details class="sub"><summary>Creation content coverage (diagnostic)</summary><div id="creationCoverage"></div></details><details><summary>Review queue and duplicate audit</summary><div id="auditDetails"></div></details></details>
 <ul>
+<li><b>v2.5.0:</b> Quiet Quest Relationships review in the Quest Journal. Curated and exact-title suggestions appear only for recorded miscellaneous objectives; optional confirm, dismiss or review-later workflow. Confirmed links reuse v2.4.3 duplicate protection, dismissed suggestions are remembered, and all suggestions remain non-binding. Existing quests, completion exceptions, assignment RNG and version-1 backup format preserved.</li>
 <li><b>v2.4.5:</b> Added curated, searchable miscellaneous objective suggestions to Dashboard Quick Discovery and the Miscellaneous Journal. Named-quest and miscellaneous suggestions now share Quick Discovery; suggestions never become eligible until explicitly recorded from Skyrim. Existing free-text entry, Fate draw rules, save format and current assignments are preserved. Corrected Available-mode readiness sampling to include miscellaneous objectives.</li>
 <li><b>v2.4.4:</b> Clarified unrestricted exploration and discovery versus deliberate quest completion under optional Strict Assignment Mode. Shared three-reason review for unexpected or unavoidable completion of unassigned regular, miscellaneous and final branch quests; prohibited deliberate completion and preserved Fate assignments. Reasons and optional notes recorded in Chronicle without a save-format change.</li>
 <li><b>v2.4.3:</b> Optional manual and suggested links between miscellaneous objectives and named quests; verified in-game discovery only, lead versus same-task review, duplicate-draw protection, Fate pool breakdown and clear ineligibility reasons. No automatic quest or faction decisions; 436-title catalogue and version-1 saves preserved.</li>
@@ -516,7 +532,7 @@
 </ul></details>
 <details class="sub release-doc1984" id="releaseChecklist1984"><summary><strong>Release checks &amp; known limitations</strong></summary>
 <ul><li><b>Regression coverage:</b> automated expedition, magic, perk, shout, quest and JSON backup suites passed during pre-release testing. See the accompanying v2.0 test report for current-build coverage.</li><li><b>Verified by the project tester:</b> a previous-version backup imported, a character level-up saved, and that change persisted after closing and reopening Brave.</li><li><b>Still subject to game verification:</b> some Skyrim/Creation quest starting conditions, alternative outcomes, spell acquisitions and modded behaviour.</li><li><b>Browser note:</b> saving is local to the browser and storage location. Export JSON before transferring devices or switching between a local file and a hosted page.</li></ul></details>
-<p class="muted" style="font-size:12px">v2.4.5 application · Expedition backup schema v1 · Offline HTML · No account required · No connection to your Skyrim files. Updates and new file versions do not automatically sync progress across different browser storage locations.</p>
+<p class="muted" style="font-size:12px">v2.5.0 application · Expedition backup schema v1 · Offline HTML · No account required · No connection to your Skyrim files. Updates and new file versions do not automatically sync progress across different browser storage locations.</p>
 </article></section>
 </main><dialog id="completionExceptionDialogV244" class="completion-dialog-v244" aria-labelledby="completionTitleV244" aria-describedby="completionIntroV244">
 <h2 id="completionTitleV244" tabindex="-1">Record a quest completion</h2>
@@ -532,7 +548,7 @@
 <textarea id="completionNoteV244" maxlength="240" rows="2" placeholder="e.g. Defeating the dungeon boss unexpectedly cleared the objective"></textarea>
 <div class="row"><button type="button" id="completionCancelV244">Cancel</button><button type="button" class="primary" id="completionRecordV244" disabled>Record exception</button></div>
 </dialog>
-<footer>Skyrim — The Fate Director · The Arbiter of Fate · v2.4.5 · Unofficial fan-made tool, not affiliated with Bethesda · Standalone offline HTML · No account required · No data sent to a server</footer><script>
+<footer>Skyrim — The Fate Director · The Arbiter of Fate · v2.5.0 · Unofficial fan-made tool, not affiliated with Bethesda · Standalone offline HTML · No account required · No data sent to a server</footer><script>
 'use strict';
 const KEY='si_fate_director_v01';
 const RACES=['Argonian','Breton','Dark Elf (Dunmer)','High Elf (Altmer)','Imperial','Khajiit','Nord','Orc (Orsimer)','Redguard','Wood Elf (Bosmer)'];
@@ -693,7 +709,7 @@ const ANNIVERSARY_STARTS={"cc_new_01": "Investigate the Ratway", "cc_new_03": "I
 const ANNIVERSARY_DIRECTIONS={"cc_new_01": "Search the Ratway in Riften for the quest lead.", "cc_new_03": "Explore Runoff Caverns and follow the Dwemer clues."};
 function questStart(q){return state.questGivers?.[q.id] ?? ACCURACY_STARTS_V1915[q.id]?.[0] ?? COVERAGE_LEADS_V1916[q.name]?.[0] ?? SKAAL_THIRSK_EVIDENCE_V1932[q.name]?.start ?? q.giver ?? QUEST_STARTS[q.id] ?? EXTRA_STARTS[q.id] ?? ANNIVERSARY_STARTS[q.id] ?? REPAIR_V1912[q.name]?.[0] ?? REPAIR_V1911[q.name]?.[0] ?? ''}
 function questDirections(q){return state.questDirections?.[q.id] ?? ACCURACY_STARTS_V1915[q.id]?.[1] ?? COVERAGE_LEADS_V1916[q.name]?.[1] ?? SKAAL_THIRSK_EVIDENCE_V1932[q.name]?.start ?? q.directions ?? QUEST_DIRECTIONS[q.id] ?? EXTRA_DIRECTIONS[q.id] ?? ANNIVERSARY_DIRECTIONS[q.id] ?? REPAIR_V1912[q.name]?.[1] ?? REPAIR_V1911[q.name]?.[1] ?? ''}
-const defaultState=()=>({version:1,edition:'anniversary',installed:['Base Game','Dawnguard','Hearthfire','Dragonborn','Creation Club','Custom'],enabledSources:[...SOURCES],enabledCategories:[...CATEGORIES],balanced:true,objectiveMode:"discovered",discoveredWeight:60,allowUndiscovered:false,approvedUnknown:[],strictAssignmentV212:false,volkiharChecksV212:{},branches:{civil:'none',daw:'none',brother:'none'},branchChoicesV210:{},questOutcomesV210:{},memberships:{},character:{name:'',race:'Argonian',style:'Mage',level:1,health:100,magicka:100,stamina:100,perkPoints:0},attributes:['Health','Magicka','Stamina'],quests:{},questGivers:{},questDirections:{},blockReasonsV1966:{},custom:[],miscObjectivesV240:[],activeMiscV241:null,active:null,history:[],rng:123456789,recentCategories:[],eligiblePerks:'Novice Destruction\nNovice Restoration\nNovice Conjuration',skills:{},ownedPerks:[],transformation:{type:'none',werewolf:{points:0,owned:[]},vampire:{points:0,owned:[]}},shoutTrackerV1974:{words:{},favourites:[],customShouts:[]},perkFocus:["Alchemy", "Alteration", "Archery", "Block", "Conjuration", "Destruction", "Enchanting", "Heavy Armor", "Illusion", "Light Armor", "Lockpicking", "One-Handed", "Pickpocket", "Restoration", "Smithing", "Sneak", "Speech", "Two-Handed"],magicDirectorV1968:{mode:'manual',followPerkFocus:true,manualSchools:['Alteration','Conjuration','Destruction','Illusion','Restoration'],protectedSchools:[],fateSchools:[],drawBasis:'',knownSpells:[],favourites:[],customSpells:[],questGatesV1969:[],questGatesEnabledV1969:false,fateRankModeV1971:'progression'}});
+const defaultState=()=>({version:1,edition:'anniversary',installed:['Base Game','Dawnguard','Hearthfire','Dragonborn','Creation Club','Custom'],enabledSources:[...SOURCES],enabledCategories:[...CATEGORIES],balanced:true,objectiveMode:"discovered",discoveredWeight:60,allowUndiscovered:false,approvedUnknown:[],strictAssignmentV212:false,volkiharChecksV212:{},branches:{civil:'none',daw:'none',brother:'none'},branchChoicesV210:{},questOutcomesV210:{},memberships:{},character:{name:'',race:'Argonian',style:'Mage',level:1,health:100,magicka:100,stamina:100,perkPoints:0},attributes:['Health','Magicka','Stamina'],quests:{},questGivers:{},questDirections:{},blockReasonsV1966:{},custom:[],miscObjectivesV240:[],relationshipDismissalsV250:[],activeMiscV241:null,active:null,history:[],rng:123456789,recentCategories:[],eligiblePerks:'Novice Destruction\nNovice Restoration\nNovice Conjuration',skills:{},ownedPerks:[],transformation:{type:'none',werewolf:{points:0,owned:[]},vampire:{points:0,owned:[]}},shoutTrackerV1974:{words:{},favourites:[],customShouts:[]},perkFocus:["Alchemy", "Alteration", "Archery", "Block", "Conjuration", "Destruction", "Enchanting", "Heavy Armor", "Illusion", "Light Armor", "Lockpicking", "One-Handed", "Pickpocket", "Restoration", "Smithing", "Sneak", "Speech", "Two-Handed"],magicDirectorV1968:{mode:'manual',followPerkFocus:true,manualSchools:['Alteration','Conjuration','Destruction','Illusion','Restoration'],protectedSchools:[],fateSchools:[],drawBasis:'',knownSpells:[],favourites:[],customSpells:[],questGatesV1969:[],questGatesEnabledV1969:false,fateRankModeV1971:'progression'}});
 // v1.9.63 — non-destructive compatibility normalisation for earlier version-1 saves.
 // Unknown progress fields, quest IDs, and custom records survive import/export untouched.
 function normalizeExpeditionV1963(input){
@@ -702,6 +718,8 @@ function normalizeExpeditionV1963(input){
  const obj=v=>v&&typeof v==='object'&&!Array.isArray(v);
  const out={...defaults,...input};
  // v2.4.0 — standalone misc checklist, version-1 backup compatible and independent of quest catalogues.
+ // v2.5.0 — dismissed suggestions are optional metadata, not Fate decisions.
+ out.relationshipDismissalsV250=Array.isArray(out.relationshipDismissalsV250)?[...new Set(out.relationshipDismissalsV250.filter(x=>typeof x==='string'&&x.length<=600))].slice(0,1000):[];
  const rawMisc=Array.isArray(out.miscObjectivesV240)?out.miscObjectivesV240:[];
  const seenMisc=new Set();
  out.miscObjectivesV240=rawMisc.filter(x=>obj(x)&&typeof x.id==='string'&&x.id.trim()&&typeof x.title==='string'&&x.title.trim()&&['open','completed'].includes(x.status)).map(x=>({
@@ -3477,7 +3495,7 @@ function failQuestV201(id){
  });
  notice('Failed in Skyrim: '+q.name+'. The failure is recorded in your expedition Chronicle.');
 }
-// v2.4.5 — Strict Assignment protects deliberate completion, not free exploration.
+// v2.5.0 — Strict Assignment protects deliberate completion, not free exploration.
 // Exceptions are evidence the player supplies after an actual Skyrim event; Fate never auto-completes a quest.
 function isAssignedByFateV212(id){return !!(state.active&&siblings(id).some(x=>x.id===state.active));}
 let completionAuthorizationV244=null;
@@ -5395,6 +5413,50 @@ function miscSuggestedQuestV243(x){
  if(lead)return catalogue.find(q=>q.name===lead)||null;
  return catalogue.find(q=>normalMiscTitleV243(q.name)===name)||null;
 }
+// v2.5.0 — candidates are informative only. They are never written to Fate's pool.
+// Each curated connection describes a possible relationship, not an assertion about the player's save.
+// Sources were checked for these specific quest transitions; generic NPC/location matches are excluded.
+const RELATIONSHIP_RULES_V250=[
+ {misc:'Talk to Aventus Aretino',quest:'Innocence Lost',kind:'lead',reason:'Speaking with Aventus finishes the introductory lead and begins Innocence Lost.',reference:'https://skyrim.fandom.com/wiki/Talk_to_Aventus_Aretino'},
+ {misc:'Speak to Aventus Aretino',quest:'Innocence Lost',kind:'lead',reason:'The conversation can resolve the introduction and begin Innocence Lost.',reference:'https://skyrim.fandom.com/wiki/Talk_to_Aventus_Aretino'},
+ {misc:"Ask about Balgruuf's strange children",quest:'The Whispering Door',kind:'lead',reason:'Speaking to Balgruuf about his children can end this lead and start The Whispering Door.',reference:'https://skyrim.fandom.com/wiki/Ask_about_Balgruuf%27s_strange_children'},
+ {misc:"Identify Riften's skooma dealer",quest:'The Raid',kind:'lead',reason:'This skooma investigation is linked to the start of The Raid. Confirm the actual journal transition.',reference:'https://skyrim.fandom.com/wiki/Identify_Riften%27s_skooma_dealer'},
+ {misc:'Find the Redguard Woman',quest:'In My Time of Need',kind:'lead',reason:'This objective is part of the opening Redguard investigation. The full quest may have additional stages.',reference:'https://skyrim.fandom.com/wiki/In_My_Time_of_Need'},
+ {misc:"Find Pantea's Flute",quest:"Pantea's Flute",kind:'lead',reason:'The instrument search overlaps a longer Bards College quest, which includes returning the flute.',reference:'https://skyrim.fandom.com/wiki/Pantea%27s_Flute_(quest)'},
+ {misc:"Find Rjorn's Drum",quest:"Rjorn's Drum",kind:'lead',reason:'Finding the drum overlaps a Bards College quest, which also requires handing it back.',reference:'https://skyrim.fandom.com/wiki/Rjorn%27s_Drum_(quest)'},
+ {misc:'Join the Imperial Legion',quest:'Joining the Legion',kind:'lead',reason:'The recruitment referral points towards the Legion questline, but joining is not automatically completed.',reference:'https://skyrim.fandom.com/wiki/Joining_the_Legion'},
+ {misc:'Join the Stormcloaks',quest:'Joining the Stormcloaks',kind:'lead',reason:'The recruitment referral is related to the Stormcloak entry quest; verify the separate stages in Skyrim.'},
+ {misc:'Join the Companions',quest:'Take Up Arms',kind:'lead',reason:'The referral leads towards the Companions initiation quest. Confirm the stages in your journal.'},
+ {misc:'Speak with the leader of the Companions',quest:'Take Up Arms',kind:'lead',reason:'Speaking to the Companions leadership introduces their initiation work; check your journal.'},
+ {misc:'Join the College of Winterhold',quest:'First Lessons',kind:'lead',reason:'The College introduction leads into First Lessons. Do not assume the entire quest is complete.'},
+ {misc:'Join the Thieves Guild',quest:'A Chance Arrangement',kind:'lead',reason:'The referral points towards Brynjolf and the Thieves Guild introduction.'}
+];
+function relationshipSuggestionV250(x){
+ if(!x||x.relatedQuestIdV243)return null;
+ const title=normalMiscTitleV243(x.title),catalogue=all();
+ const rule=RELATIONSHIP_RULES_V250.find(r=>normalMiscTitleV243(r.misc)===title);
+ let quest=rule?catalogue.find(q=>normalMiscTitleV243(q.name)===normalMiscTitleV243(rule.quest)):null;
+ // Strong exact-title matches only: no conjectures from an NPC or a location.
+ if(!quest&&!rule)quest=catalogue.find(q=>normalMiscTitleV243(q.name)===title);
+ if(!quest)return null;
+ const key=JSON.stringify([x.id,title,normalMiscTitleV243(quest.name)]);
+ if(state.relationshipDismissalsV250?.includes(key))return null;
+ return {misc:x,quest,kind:rule?.kind||'lead',reason:rule?.reason||'The objective text matches a named quest exactly. Check whether these are separate stages or the same task.',reference:rule?.reference||'',key,status:status(quest.id)};
+}
+function relationshipQueueV250(){return miscEntriesV240().map(relationshipSuggestionV250).filter(Boolean)}
+function renderRelationshipsV250(){
+ const list=relationshipQueueV250(),count=$('relationshipCountV250'),area=$('relationshipReviewListV250');
+ if(!count||!area)return;
+ count.textContent=' · '+list.length+' to review';
+ area.innerHTML=list.length?list.map(c=>`<div class="relationship-entry-v250" data-relationship-id-v250="${esc(c.misc.id)}"><strong>${esc(c.misc.title)} → ${esc(c.quest.name)}</strong><p>Miscellaneous objective · ${esc(c.quest.source)} quest · ${esc(c.status==='unknown'?'Quest not recorded yet': 'Quest '+c.status)}</p><p class="relationship-evidence-v250">${esc(c.reason)}</p>${c.reference?`<p><a href="${esc(c.reference)}" target="_blank" rel="noopener noreferrer">View quest reference ↗</a></p>`:''}<label>How are they connected?<select data-relationship-kind-v250><option value="lead" ${c.kind==='lead'?'selected':''}>Leads to a separate quest or stage</option><option value="same">Same task — avoid duplicate draws</option><option value="separate">Related, but independent</option></select></label><div class="row"><button type="button" class="primary" data-relationship-action-v250="confirm" data-relationship-id-v250="${esc(c.misc.id)}">Confirm relationship</button><button type="button" data-relationship-action-v250="dismiss" data-relationship-id-v250="${esc(c.misc.id)}">Not related</button><button type="button" data-relationship-action-v250="view" data-relationship-id-v250="${esc(c.misc.id)}">Open objective</button></div></div>`).join(''):'<p class="muted">No relationships awaiting review. Existing confirmed links can still be edited in the Misc. tracker.</p>';
+}
+function openRelationshipReviewV250(id){
+ $('relationshipReviewV250').open=true;
+ renderRelationshipsV250();
+ const el=[...$('relationshipReviewListV250').querySelectorAll('[data-relationship-id-v250]')].find(node=>node.dataset.relationshipIdV250===id);
+ (el||$('relationshipReviewV250')).scrollIntoView({block:'center',behavior:'smooth'});
+}
+
 function miscLinkedQuestV243(x){return x?.relatedQuestIdV243?byId(x.relatedQuestIdV243)||null:null;}
 function completedSameMiscForQuestV243(q){
  if(!q)return null;
@@ -5420,7 +5482,7 @@ function miscEligibilityReasonsV243(x){
 }
 function eligibleMiscV241(x){return miscEligibilityReasonsV243(x).length===0;}
 
-// v2.4.5 — curated journal-style miscellaneous suggestions.
+// v2.5.0 — curated journal-style miscellaneous suggestions.
 // These are text suggestions, NOT pre-discovered objectives or new independent quests.
 // Dynamic bounties and variable targets must still be entered using Skyrim's actual wording.
 // References: https://skyrim.fandom.com/wiki/Miscellaneous_Objectives
@@ -5481,7 +5543,7 @@ function openMiscJournalV240(){
 // v2.4.3 — one link editor at a time; links are references, not quest completions.
 let miscLinkEditingV243='';
 function miscLinkPanelV243(x){
- const linked=miscLinkedQuestV243(x),suggest=linked?null:miscSuggestedQuestV243(x);
+ const linked=miscLinkedQuestV243(x),candidate=linked?null:relationshipSuggestionV250(x),suggest=candidate?.quest||null;
  const linkedStatus=linked?status(linked.id):'';
  let out='<details class="misc-related-v243" '+(miscLinkEditingV243===x.id?'open':'')+'><summary><b>Related quest</b> · '+(linked?esc(linked.name):suggest?'Possible link: '+esc(suggest.name):'Optional connection')+'</summary>';
  if(linked){
@@ -5490,13 +5552,14 @@ function miscLinkPanelV243(x){
   out+='<p class="muted">Linked quests are never completed or discovered automatically. A full quest is still governed by its own prerequisites and faction rules.</p>';
   if(linkedStatus==='unknown')out+='<button type="button" class="small" data-misc-action-v240="discoverlink" data-misc-id-v240="'+esc(x.id)+'">Discovered in Skyrim — add full quest</button>';
   else out+='<button type="button" class="small" data-misc-action-v240="openlink" data-misc-id-v240="'+esc(x.id)+'">View related quest</button>';
- }else if(suggest){out+='<p><b>Possible progression link:</b> '+esc(suggest.name)+'. Confirm whether these are separate stages or the same objective in your own Skyrim journal.</p>';}
+ }else if(suggest){out+='<p><b>Possible link:</b> '+esc(suggest.name)+'. '+esc(candidate.reason)+'</p><button type="button" class="small" data-misc-action-v240="reviewrel" data-misc-id-v240="'+esc(x.id)+'">Review in Quest Relationships</button>';}
  else out+='<p class="muted">No specific link was identified. You can choose any named quest in your catalogue.</p>';
  if(miscLinkEditingV243===x.id){
   const catalogue=all().slice().sort((a,b)=>a.name.localeCompare(b.name));
   const current=linked?.id||suggest?.id||'';
   out+='<div class="misc-link-editor-v243"><label>Choose the full quest<select data-link-select-v243="true"><option value="">Choose a named quest...</option>'+catalogue.map(q=>'<option value="'+esc(q.id)+'" '+(q.id===current?'selected':'')+'>'+esc(q.name+' · '+q.source)+'</option>').join('')+'</select></label>';
-  out+='<label>How do these objectives relate?<select data-link-relation-v243="true"><option value="lead" '+(x.relationV243==='lead'?'selected':'')+'>Misc. objective leads to a separate full quest</option><option value="same" '+(x.relationV243==='same'?'selected':'')+'>Same task (avoid duplicate draws)</option><option value="separate" '+(x.relationV243==='separate'?'selected':'')+'>Related, but independent</option></select></label>';
+  const defaultRelation=linked?x.relationV243:(candidate?.kind||'lead');
+  out+='<label>How do these objectives relate?<select data-link-relation-v243="true"><option value="lead" '+(defaultRelation==='lead'?'selected':'')+'>Misc. objective leads to a separate full quest</option><option value="same" '+(x.relationV243==='same'?'selected':'')+'>Same task (avoid duplicate draws)</option><option value="separate" '+(x.relationV243==='separate'?'selected':'')+'>Related, but independent</option></select></label>';
   out+='<div class="row"><button type="button" class="small" data-misc-action-v240="savelink" data-misc-id-v240="'+esc(x.id)+'">Save connection</button><button type="button" class="small" data-misc-action-v240="cancellink" data-misc-id-v240="'+esc(x.id)+'">Cancel</button></div></div>';
  }else{out+='<div class="row"><button type="button" class="small" data-misc-action-v240="editlink" data-misc-id-v240="'+esc(x.id)+'">'+(linked?'Change connection':suggest?'Review suggested link':'Connect to full quest')+'</button>'+(linked?'<button type="button" class="small" data-misc-action-v240="unlink" data-misc-id-v240="'+esc(x.id)+'">Remove link</button>':'')+'</div>';}
  if(x.relationV243==='same'&&linked&&linkedStatus!=='unknown')out+='<p class="muted">This miscellaneous entry is withheld from future draws as an overlapping task. If already assigned, it remains assigned until you resolve or suspend it.</p>';
@@ -5528,6 +5591,7 @@ function addOrEditMiscV240(){
  clearMiscFormV240();$('miscStatusV240').value='open';$('miscSearchV240').value='';renderMiscV240();notice((existing?'Updated':'Recorded')+' miscellaneous objective: '+title);
 }
 function renderLibrary(){
+ renderRelationshipsV250();
  renderMiscV240();
  renderWorldEventsV212();
  renderFinalQuestAuditV1980();
@@ -5788,12 +5852,33 @@ $('bankPerk').onclick=()=>notice('Perk points remain banked until you choose to 
 // v2.4.0 — isolated manual miscellaneous checklist controls.
 $('dashMiscV240').onclick=openMiscJournalV240;
 $('miscFormV240').onsubmit=e=>{e.preventDefault();addOrEditMiscV240();};
+$('relationshipReviewListV250').onclick=e=>{
+ const b=e.target.closest('[data-relationship-action-v250]');if(!b)return;
+ const id=b.dataset.relationshipIdV250,action=b.dataset.relationshipActionV250;
+ const entry=miscEntriesV240().find(x=>x.id===id),candidate=relationshipSuggestionV250(entry);
+ if(!candidate){renderRelationshipsV250();notice('That suggestion is no longer pending.');return;}
+ if(action==='confirm'){
+  const box=b.closest('.relationship-entry-v250');const kind=box?.querySelector('[data-relationship-kind-v250]')?.value;
+  if(!['lead','same','separate'].includes(kind))return;
+  commit('Quest relationship confirmed',entry.title+' → '+candidate.quest.name+' ('+kind+')',()=>{entry.relatedQuestIdV243=candidate.quest.id;entry.relationV243=kind});
+  notice('Relationship saved. Neither objective was completed, assigned or discovered automatically.');return;
+ }
+ if(action==='dismiss'){
+  commit('Quest relationship suggestion dismissed',entry.title+' ↛ '+candidate.quest.name,()=>{state.relationshipDismissalsV250.push(candidate.key)});
+  notice('Suggestion dismissed. You can still add a link manually in the Misc. tracker.');return;
+ }
+ if(action==='view'){
+  $('miscSearchV240').value=entry.title;$('miscStatusV240').value='all';openMiscJournalV240();
+  $('miscSearchV240').value=entry.title;$('miscStatusV240').value='all';renderMiscV240();return;
+ }
+};
 $('miscCancelEditV240').onclick=clearMiscFormV240;
 $('miscSearchV240').oninput=renderMiscV240;
 $('miscStatusV240').onchange=renderMiscV240;
 $('miscListV240').onclick=e=>{
  const b=e.target.closest('[data-misc-action-v240]');if(!b)return;
  const id=b.dataset.miscIdV240,action=b.dataset.miscActionV240,entry=miscEntriesV240().find(x=>x.id===id);if(!entry)return;
+ if(action==='reviewrel'){openRelationshipReviewV250(id);return;}
  if(action==='editlink'){miscLinkEditingV243=id;renderMiscV240();return;}
  if(action==='cancellink'){miscLinkEditingV243='';renderMiscV240();return;}
  if(action==='savelink'){
